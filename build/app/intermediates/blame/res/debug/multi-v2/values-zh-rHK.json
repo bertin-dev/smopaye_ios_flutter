@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\615cbc3b009c6ace60b4a000b7c5707b\\core-1.1.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\43c36ea0a5e049ba215de6fe6c2b050a\\jetified-zxing-android-embedded-3.5.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,104,151,244",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "99,146,239,309"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "156,205,252,345",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "200,247,340,410"
+                    }
+                }
+            ]
+        }
+    ]
+}

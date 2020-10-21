@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\43c36ea0a5e049ba215de6fe6c2b050a\\jetified-zxing-android-embedded-3.5.0\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,167,323",
+                        "endColumns": "58,52,155,112",
+                        "endOffsets": "109,162,318,431"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "156,215,268,424",
+                        "endColumns": "58,52,155,112",
+                        "endOffsets": "210,263,419,532"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\615cbc3b009c6ace60b4a000b7c5707b\\core-1.1.0\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

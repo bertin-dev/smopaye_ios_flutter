@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smopaye_mobile/views/menuSubscription.dart';
 import 'views/facebook.dart';
 import 'views/historyDebit.dart';
 import 'views/onlineSupport.dart';
@@ -68,6 +69,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => EditAccount());   // Route de la page d'édition de compte
       case '/transfer':
         return MaterialPageRoute(builder: (context) => Transfer());   // Route de la page de transfert d'argent
+      case '/menuSubscription':
+        return MaterialPageRoute(builder: (context) => MenuSubscription());   // Route de la page du Menu Abonnement
       case '/renewSubscription':
         return MaterialPageRoute(builder: (context) => RenewSubscription());   // Route de la page de renouvellement
       case '/verifyAccount':

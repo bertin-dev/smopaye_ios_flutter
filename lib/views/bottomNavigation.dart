@@ -157,7 +157,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   ),
 
                   ListTile(
-                    onTap: (){Navigator.pushNamed(context, '/renewSubscription');},
+                    onTap: (){Navigator.pushNamed(context, '/menuSubscription');},
                     dense: true,
                     leading: Icon(Icons.play_circle_filled),
                     title: Text('Renouveler Abonnement'),

@@ -8,7 +8,20 @@ class DefaultAppBar extends StatelessWidget  with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-        title: Text(title, style: TextStyle(fontSize: 19.0),),
+        title: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold), textAlign: TextAlign.left,),
+              Text("E-ZPASS by SMOPAYE", style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w400), textAlign: TextAlign.left,),
+            ]
+        ),
+
+        //centerTitle: true,
+        /*bottom: PreferredSize(
+            child: Text("E-ZPASS by SMOPAYE", style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold), textAlign: TextAlign.left,),
+            preferredSize: Size.fromHeight(0)
+        ),*/
         actions: <Widget>[
           PopupMenuButton<String>(
             onSelected: (String value) {

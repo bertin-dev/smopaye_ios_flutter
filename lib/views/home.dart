@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smopaye_mobile/services/authService.dart';
+import 'package:smopaye_mobile/services/authService2.dart';
 import 'package:smopaye_mobile/views/widgets/homeCommands.dart';
 
 class Home extends StatefulWidget {
@@ -19,10 +20,14 @@ class _HomeState extends State<Home> {
   var role = "";
   var etat = "";
   var _isVisible;
+  AuthService2 authService2;
 
   @override
   void initState() {
     _isVisible = false;
+    authService2 = AuthService2();
+    authService2.fetchAllProfilUser();
+
     readPhone();
     super.initState();
   }

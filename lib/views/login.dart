@@ -12,6 +12,24 @@ import 'widgets/form/textField.dart';
 
 // Page d'authentification
 
+void main(){
+  runApp(myLogin());
+}
+
+class myLogin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xff039BE5),
+      ),
+      home: Login(),
+    );
+  }
+}
+////////////////////////////////////////////////////////////////
+
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();

@@ -4,9 +4,12 @@ import 'dart:convert';
 import 'dart:ffi';
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:smopaye_mobile/utils/endpoints.dart';
+import 'package:smopaye_mobile/models/abonnement.dart';
+import 'package:smopaye_mobile/models/compte.dart';
+import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/utils/endpoints.dart';
 
 class AuthService {
 
@@ -26,7 +29,7 @@ class AuthService {
 
     try {
 
-      String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/auth/login";
+      String myUrl = Endpoints.baseUrl + Endpoints.login;
       final response = await http.post(myUrl,
           headers: {
             'Accept': 'application/json'
@@ -71,7 +74,7 @@ class AuthService {
   //service de Reinitialisation du mot de passe
   static dynamic reset_password({ @required String phone, @required String pIdentite }) async {
 
-      String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/renitializePassword";
+      String myUrl = Endpoints.baseUrl + Endpoints.reset_password;
       final response = await http.post(myUrl,
           headers: {
             'Accept': 'application/json'
@@ -83,10 +86,10 @@ class AuthService {
       return response;
   }
 
-  //traitement du profil utilisateur
+  //traitement du profil utilisateur méthode 1
   static dynamic profilUser({ @required String phone}) async {
 
-    var uri = "https://webservice.domaineteste.space.smopaye.fr/public/api/user/profile/$phone";
+    var uri =  Endpoints.baseUrl + Endpoints.profilUser + phone;
     final prefs = await SharedPreferences.getInstance();
     final key = 'access_token';
     final value = prefs.get(key) ?? 0;
@@ -99,6 +102,47 @@ class AuthService {
     return json.decode(response.body);
 
   }
+
+  //traitement du profil utilisateur méthode 2 pour lister les Abonnements
+  Future<List<Abonnement>> userProfilSubscription(@required String phone) async{
+    String url = Endpoints.baseUrl + Endpoints.profilUser + phone;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+    var response = await http.get( url, headers: headers);
+    List<Abonnement> itemAbonnement = [];
+    if(response.statusCode == 200){
+      Map<String, dynamic> body = jsonDecode(response.body);
+
+      //object
+      DataUser dataUser = DataUser.fromJson(body);
+      print(dataUser.phone);
+
+      Compte compte = dataUser.compte;
+      print(compte.compte_subscriptions);
+
+      //ArrayList
+      for(var item in compte.compte_subscriptions){
+        //Abonnement abon = item;
+        print(item.subscription_type);
+        itemAbonnement.add(item);
+      }
+    }
+    return itemAbonnement;
+  }
+
+
+
+
+
+
+
+
 
 
   //Différents Roles du client --Administrateur, utilisateur, Agent, Accepteur
@@ -521,7 +565,7 @@ class AuthService {
           'Authorization' : 'Bearer $value'
         },
         body: {
-          "card_id" : "$card_id",
+          //"card_id" : "$card_id",
           "card_state" : "$card_state"
         });
     return response;

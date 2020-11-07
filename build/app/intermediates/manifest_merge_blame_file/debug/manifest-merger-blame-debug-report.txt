@@ -2,11 +2,11 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.ezpass.smopaye_mobile"
 4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+5    android:versionName="1.3.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
-9        android:targetSdkVersion="28" />
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="30" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
@@ -14,128 +14,177 @@
 14    <uses-permission android:name="android.permission.INTERNET" />
 14-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml:6:5-66
 14-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml:6:22-64
-15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
-15-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-76
-16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-16-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-76
-16-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-73
-17    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
-17-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:21:5-65
-17-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:21:22-62
-18    <uses-feature
-18-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:24:5-26:36
-19        android:name="android.hardware.camera"
-19-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:25:9-47
-20        android:required="false" />
-20-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:26:9-33
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:3:5-79
+15-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:3:22-76
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:4:5-81
+16-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:4:22-78
+17    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+17-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:5:5-85
+17-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:5:22-82
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+18-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-76
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-76
+19-->[:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-73
+20
 21    <uses-feature
-21-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:27:5-29:36
-22        android:name="android.hardware.camera.front"
-22-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:28:9-53
-23        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-23-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:29:9-33
-24    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
-25    <uses-feature
-25-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:32:5-34:36
-26        android:name="android.hardware.camera.autofocus"
-26-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:33:9-57
-27        android:required="false" />
-27-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:34:9-33
-28    <uses-feature
-28-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:35:5-37:36
-29        android:name="android.hardware.camera.flash"
-29-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:36:9-53
-30        android:required="false" />
-30-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:37:9-33
-31    <uses-feature
-31-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:38:5-40:36
-32        android:name="android.hardware.screen.landscape"
-32-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:39:9-57
-33        android:required="false" />
-33-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:40:9-33
-34    <uses-feature
-34-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:41:5-43:36
-35        android:name="android.hardware.wifi"
-35-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:42:9-45
-36        android:required="false" />
-36-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:43:9-33
-37    <!--
-38 io.flutter.app.FlutterApplication is an android.app.Application that
-39         calls FlutterMain.startInitialization(this); in its onCreate method.
-40         In most cases you can leave this as-is, but you if you want to provide
-41         additional functionality it is fine to subclass or reimplement
-42         FlutterApplication and put your custom class here.
-43    -->
-44    <application
-44-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:8:5-29:19
-45        android:name="io.flutter.app.FlutterApplication"
-45-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:9:9-57
-46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-46-->[androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:18-86
-47        android:debuggable="true"
-48        android:icon="@mipmap/ic_launcher"
-48-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:11:9-43
-49        android:label="smopaye_mobile" >
-49-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:10:9-39
-50        <activity
-50-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:12:9-23:20
-51            android:name="com.ezpass.smopaye_mobile.MainActivity"
-51-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:13:13-41
-52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-52-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:16:13-163
-53            android:hardwareAccelerated="true"
-53-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:17:13-47
-54            android:launchMode="singleTop"
-54-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:14:13-43
-55            android:theme="@style/LaunchTheme"
-55-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:15:13-47
-56            android:windowSoftInputMode="adjustResize" >
-56-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:18:13-55
-57            <intent-filter>
-57-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:19:13-22:29
-58                <action android:name="android.intent.action.MAIN" />
-58-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:20:17-68
-58-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:20:25-66
-59
-60                <category android:name="android.intent.category.LAUNCHER" />
-60-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:21:17-76
-60-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:21:27-74
-61            </intent-filter>
-62        </activity>
-63        <!--
-64             Don't delete the meta-data below.
-65             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-66        -->
-67        <meta-data
-67-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:26:9-28:33
-68            android:name="flutterEmbedding"
-68-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:27:13-44
-69            android:value="2" />
-69-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:28:13-30
-70
-71        <activity
-71-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
-72            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-72-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
-73            android:exported="false"
-73-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
-74            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-74-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
-75        <activity
-75-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:46:9-52:63
-76            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-76-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:47:13-74
-77            android:clearTaskOnLaunch="true"
-77-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:48:13-45
-78            android:screenOrientation="sensorLandscape"
-78-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:49:13-56
-79            android:stateNotNeeded="true"
-79-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:50:13-42
-80            android:theme="@style/zxing_CaptureTheme"
-80-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:51:13-54
-81            android:windowSoftInputMode="stateAlwaysHidden" />
-81-->[com.journeyapps:zxing-android-embedded:3.5.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\43c36ea0a5e049ba215de6fe6c2b050a\jetified-zxing-android-embedded-3.5.0\AndroidManifest.xml:52:13-60
-82    </application>
-83
-84</manifest>
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+24
+25    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+25-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:5-65
+25-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:22-62
+26    <uses-feature
+26-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:25:5-27:36
+27        android:name="android.hardware.camera"
+27-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:26:9-47
+28        android:required="false" />
+28-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:27:9-33
+29    <uses-feature
+29-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:28:5-30:36
+30        android:name="android.hardware.camera.front"
+30-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:29:9-53
+31        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+31-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:30:9-33
+32    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+33    <uses-feature
+33-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:33:5-35:36
+34        android:name="android.hardware.camera.autofocus"
+34-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:34:9-57
+35        android:required="false" />
+35-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:35:9-33
+36    <uses-feature
+36-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:36:5-38:36
+37        android:name="android.hardware.camera.flash"
+37-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:37:9-53
+38        android:required="false" />
+38-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:38:9-33
+39    <uses-feature
+39-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:39:5-41:36
+40        android:name="android.hardware.screen.landscape"
+40-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:40:9-57
+41        android:required="false" />
+41-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:41:9-33
+42    <uses-feature
+42-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:42:5-44:36
+43        android:name="android.hardware.wifi"
+43-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:43:9-45
+44        android:required="false" />
+44-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:44:9-33
+45    <!--
+46 io.flutter.app.FlutterApplication is an android.app.Application that
+47         calls FlutterMain.startInitialization(this); in its onCreate method.
+48         In most cases you can leave this as-is, but you if you want to provide
+49         additional functionality it is fine to subclass or reimplement
+50         FlutterApplication and put your custom class here.
+51    -->
+52    <application
+52-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:11:5-38:19
+53        android:name="io.flutter.app.FlutterApplication"
+53-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:12:9-57
+54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+54-->[androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:18-86
+55        android:debuggable="true"
+56        android:icon="@mipmap/launcher_icon"
+56-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:14:9-45
+57        android:label="smopaye_mobile" >
+57-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:13:9-39
+58
+59        <!-- TODO: Add your API key here -->
+60        <meta-data
+60-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:17:9-19:75
+61            android:name="com.google.android.geo.API_KEY"
+61-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:18:17-62
+62            android:value="AIzaSyB5-3lYNbixdrZF4ZH9eJbrZkrRjEp_XO8" />
+62-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:19:17-72
+63
+64        <activity
+64-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:21:9-32:20
+65            android:name="com.ezpass.smopaye_mobile.MainActivity"
+65-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:22:13-41
+66            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+66-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:25:13-163
+67            android:hardwareAccelerated="true"
+67-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:26:13-47
+68            android:launchMode="singleTop"
+68-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:23:13-43
+69            android:theme="@style/LaunchTheme"
+69-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:24:13-47
+70            android:windowSoftInputMode="adjustResize" >
+70-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:27:13-55
+71            <intent-filter>
+71-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:28:13-31:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:29:17-68
+72-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:29:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:30:17-76
+74-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:30:27-74
+75            </intent-filter>
+76        </activity>
+77        <!--
+78             Don't delete the meta-data below.
+79             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+80        -->
+81        <meta-data
+81-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:35:9-37:33
+82            android:name="flutterEmbedding"
+82-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:36:13-44
+83            android:value="2" />
+83-->C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml:37:13-30
+84
+85        <activity
+85-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+86            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+86-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+87            android:exported="false"
+87-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+88            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> <!-- Needs to be explicitly declared on P+ -->
+88-->[:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+89        <uses-library
+89-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+90            android:name="org.apache.http.legacy"
+90-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+91            android:required="false" />
+91-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+92
+93        <activity
+93-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+94-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+97
+98        <meta-data
+98-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+99            android:name="com.google.android.gms.version"
+99-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+100            android:value="@integer/google_play_services_version" />
+100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+101
+102        <activity
+102-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:47:9-53:63
+103            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+103-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:48:13-74
+104            android:clearTaskOnLaunch="true"
+104-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:49:13-45
+105            android:screenOrientation="sensorLandscape"
+105-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:50:13-56
+106            android:stateNotNeeded="true"
+106-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:51:13-42
+107            android:theme="@style/zxing_CaptureTheme"
+107-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:52:13-54
+108            android:windowSoftInputMode="stateAlwaysHidden" />
+108-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:53:13-60
+109    </application>
+110
+111</manifest>

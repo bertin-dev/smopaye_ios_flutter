@@ -25,7 +25,7 @@ class SmopayeShops extends StatelessWidget {
 
           ListTile(
             dense: true,
-            onTap: (){Navigator.pushNamed(context, '/unavailable');},
+            onTap: (){Navigator.pushNamed(context, '/google_map');},
             leading: Icon(MdiIcons.navigation, color: Color(0xff039BE5), size: 40,),
             title: Text("Near", style: TextStyle(color: Color(0xff039BE5), fontSize: 18, fontWeight: FontWeight.bold)),
             trailing: Icon(Icons.arrow_forward_ios, color: Color(0xff039BE5),),

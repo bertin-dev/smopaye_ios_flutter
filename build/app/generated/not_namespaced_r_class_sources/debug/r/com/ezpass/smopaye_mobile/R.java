@@ -15,12 +15,84 @@ public final class R {
      */
     public static final int alpha=0x7f010000;
     /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int ambientEnabled=0x7f010001;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int buttonSize=0x7f010002;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraBearing=0x7f010003;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraMaxZoomPreference=0x7f010004;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraMinZoomPreference=0x7f010005;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraTargetLat=0x7f010006;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraTargetLng=0x7f010007;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraTilt=0x7f010008;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int cameraZoom=0x7f010009;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int circleCrop=0x7f01000a;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int colorScheme=0x7f01000b;
+    /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int coordinatorLayoutStyle=0x7f010001;
+    public static final int coordinatorLayoutStyle=0x7f01000c;
     /**
      * The reference to the font file to be used. This should be a file in the res/font folder
      * and should therefore have an R reference value. E.g. @font/myfont
@@ -29,13 +101,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f010002;
+    public static final int font=0x7f01000d;
     /**
      * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f010003;
+    public static final int fontProviderAuthority=0x7f01000e;
     /**
      * The sets of hashes for the certificates the provider should be signed with. This is
      * used to verify the identity of the provider, and is only required if the provider is not
@@ -47,7 +119,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f010004;
+    public static final int fontProviderCerts=0x7f01000f;
     /**
      * The strategy to be used when fetching font data from a font provider in XML layouts.
      * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
@@ -74,7 +146,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f010005;
+    public static final int fontProviderFetchStrategy=0x7f010010;
     /**
      * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
@@ -88,21 +160,21 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f010006;
+    public static final int fontProviderFetchTimeout=0x7f010011;
     /**
      * The package for the Font Provider to be used for the request. This is used to verify
      * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f010007;
+    public static final int fontProviderPackage=0x7f010012;
     /**
      * The query to be sent over to the provider. Refer to your font provider's documentation
      * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f010008;
+    public static final int fontProviderQuery=0x7f010013;
     /**
      * The style of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any style information in the font's header tables. If
@@ -117,7 +189,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f010009;
+    public static final int fontStyle=0x7f010014;
     /**
      * The variation settings to be applied to the font. The string should be in the following
      * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
@@ -126,7 +198,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f01000a;
+    public static final int fontVariationSettings=0x7f010015;
     /**
      * The weight of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any weight information in the font's header tables. Must
@@ -135,7 +207,24 @@ public final class R {
      * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f01000b;
+    public static final int fontWeight=0x7f010016;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int imageAspectRatio=0x7f010017;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     */
+    public static final int imageAspectRatioAdjust=0x7f010018;
     /**
      * A reference to an array of integers representing the
      * locations of horizontal keylines in dp from the starting edge.
@@ -147,7 +236,23 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int keylines=0x7f01000c;
+    public static final int keylines=0x7f010019;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int latLngBoundsNorthEastLatitude=0x7f01001a;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int latLngBoundsNorthEastLongitude=0x7f01001b;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int latLngBoundsSouthWestLatitude=0x7f01001c;
+    /**
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     */
+    public static final int latLngBoundsSouthWestLongitude=0x7f01001d;
     /**
      * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
@@ -155,7 +260,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout_anchor=0x7f01000d;
+    public static final int layout_anchor=0x7f01001e;
     /**
      * Specifies how an object should position relative to an anchor, on both the X and Y axes,
      * within its parent's bounds.
@@ -187,14 +292,14 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
-    public static final int layout_anchorGravity=0x7f01000e;
+    public static final int layout_anchorGravity=0x7f01001f;
     /**
      * The class name of a Behavior class defining special runtime behavior
      * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_behavior=0x7f01000f;
+    public static final int layout_behavior=0x7f010020;
     /**
      * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -213,7 +318,7 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      */
-    public static final int layout_dodgeInsetEdges=0x7f010010;
+    public static final int layout_dodgeInsetEdges=0x7f010021;
     /**
      * Specifies how this view insets the CoordinatorLayout and make some other views
      * dodge it.
@@ -232,14 +337,43 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      */
-    public static final int layout_insetEdge=0x7f010011;
+    public static final int layout_insetEdge=0x7f010022;
     /**
      * The index of a keyline this view should position relative to.
      * android:layout_gravity will affect how the view aligns to the
      * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_keyline=0x7f010012;
+    public static final int layout_keyline=0x7f010023;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int liteMode=0x7f010024;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>hybrid</td><td>4</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>normal</td><td>1</td><td></td></tr>
+     * <tr><td>satellite</td><td>2</td><td></td></tr>
+     * <tr><td>terrain</td><td>3</td><td></td></tr>
+     * </table>
+     */
+    public static final int mapType=0x7f010025;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int scopeUris=0x7f010026;
     /**
      * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
@@ -250,13 +384,63 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f010013;
+    public static final int statusBarBackground=0x7f010027;
     /**
      * The index of the font in the tcc font file. If the font file referenced is not in the
      * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f010014;
+    public static final int ttcIndex=0x7f010028;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiCompass=0x7f010029;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiMapToolbar=0x7f01002a;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiRotateGestures=0x7f01002b;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiScrollGestures=0x7f01002c;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiScrollGesturesDuringRotateOrZoom=0x7f01002d;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiTiltGestures=0x7f01002e;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiZoomControls=0x7f01002f;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int uiZoomGestures=0x7f010030;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int useViewLifecycle=0x7f010031;
+    /**
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int zOrderOnTop=0x7f010032;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -264,7 +448,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int zxing_framing_rect_height=0x7f010015;
+    public static final int zxing_framing_rect_height=0x7f010033;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -272,13 +456,13 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int zxing_framing_rect_width=0x7f010016;
+    public static final int zxing_framing_rect_width=0x7f010034;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int zxing_possible_result_points=0x7f010017;
+    public static final int zxing_possible_result_points=0x7f010035;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -291,56 +475,67 @@ public final class R {
      * <tr><td>fitXY</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int zxing_preview_scaling_strategy=0x7f010018;
+    public static final int zxing_preview_scaling_strategy=0x7f010036;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int zxing_result_view=0x7f010019;
+    public static final int zxing_result_view=0x7f010037;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int zxing_scanner_layout=0x7f01001a;
+    public static final int zxing_scanner_layout=0x7f010038;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int zxing_use_texture_view=0x7f01001b;
+    public static final int zxing_use_texture_view=0x7f010039;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int zxing_viewfinder_laser=0x7f01001c;
+    public static final int zxing_viewfinder_laser=0x7f01003a;
     /**
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int zxing_viewfinder_mask=0x7f01001d;
+    public static final int zxing_viewfinder_mask=0x7f01003b;
   }
   public static final class color {
-    public static final int notification_action_color_filter=0x7f020000;
-    public static final int notification_icon_bg_color=0x7f020001;
-    public static final int notification_material_background_media_default_color=0x7f020002;
-    public static final int primary_text_default_material_dark=0x7f020003;
-    public static final int ripple_material_light=0x7f020004;
-    public static final int secondary_text_default_material_dark=0x7f020005;
-    public static final int secondary_text_default_material_light=0x7f020006;
-    public static final int zxing_custom_possible_result_points=0x7f020007;
-    public static final int zxing_custom_result_view=0x7f020008;
-    public static final int zxing_custom_viewfinder_laser=0x7f020009;
-    public static final int zxing_custom_viewfinder_mask=0x7f02000a;
-    public static final int zxing_possible_result_points=0x7f02000b;
-    public static final int zxing_result_view=0x7f02000c;
-    public static final int zxing_status_text=0x7f02000d;
-    public static final int zxing_transparent=0x7f02000e;
-    public static final int zxing_viewfinder_laser=0x7f02000f;
-    public static final int zxing_viewfinder_mask=0x7f020010;
+    public static final int common_google_signin_btn_text_dark=0x7f020000;
+    public static final int common_google_signin_btn_text_dark_default=0x7f020001;
+    public static final int common_google_signin_btn_text_dark_disabled=0x7f020002;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f020003;
+    public static final int common_google_signin_btn_text_dark_pressed=0x7f020004;
+    public static final int common_google_signin_btn_text_light=0x7f020005;
+    public static final int common_google_signin_btn_text_light_default=0x7f020006;
+    public static final int common_google_signin_btn_text_light_disabled=0x7f020007;
+    public static final int common_google_signin_btn_text_light_focused=0x7f020008;
+    public static final int common_google_signin_btn_text_light_pressed=0x7f020009;
+    public static final int common_google_signin_btn_tint=0x7f02000a;
+    public static final int notification_action_color_filter=0x7f02000b;
+    public static final int notification_icon_bg_color=0x7f02000c;
+    public static final int notification_material_background_media_default_color=0x7f02000d;
+    public static final int primary_text_default_material_dark=0x7f02000e;
+    public static final int ripple_material_light=0x7f02000f;
+    public static final int secondary_text_default_material_dark=0x7f020010;
+    public static final int secondary_text_default_material_light=0x7f020011;
+    public static final int zxing_custom_possible_result_points=0x7f020012;
+    public static final int zxing_custom_result_view=0x7f020013;
+    public static final int zxing_custom_viewfinder_laser=0x7f020014;
+    public static final int zxing_custom_viewfinder_mask=0x7f020015;
+    public static final int zxing_possible_result_points=0x7f020016;
+    public static final int zxing_result_view=0x7f020017;
+    public static final int zxing_status_text=0x7f020018;
+    public static final int zxing_transparent=0x7f020019;
+    public static final int zxing_viewfinder_laser=0x7f02001a;
+    public static final int zxing_viewfinder_mask=0x7f02001b;
   }
   public static final class dimen {
     public static final int compat_button_inset_horizontal_material=0x7f030000;
@@ -371,19 +566,40 @@ public final class R {
     public static final int subtitle_shadow_radius=0x7f030019;
   }
   public static final class drawable {
-    public static final int launch_background=0x7f040000;
-    public static final int notification_action_background=0x7f040001;
-    public static final int notification_bg=0x7f040002;
-    public static final int notification_bg_low=0x7f040003;
-    public static final int notification_bg_low_normal=0x7f040004;
-    public static final int notification_bg_low_pressed=0x7f040005;
-    public static final int notification_bg_normal=0x7f040006;
-    public static final int notification_bg_normal_pressed=0x7f040007;
-    public static final int notification_icon_background=0x7f040008;
-    public static final int notification_template_icon_bg=0x7f040009;
-    public static final int notification_template_icon_low_bg=0x7f04000a;
-    public static final int notification_tile_bg=0x7f04000b;
-    public static final int notify_panel_notification_icon_bg=0x7f04000c;
+    public static final int common_full_open_on_phone=0x7f040000;
+    public static final int common_google_signin_btn_icon_dark=0x7f040001;
+    public static final int common_google_signin_btn_icon_dark_focused=0x7f040002;
+    public static final int common_google_signin_btn_icon_dark_normal=0x7f040003;
+    public static final int common_google_signin_btn_icon_dark_normal_background=0x7f040004;
+    public static final int common_google_signin_btn_icon_disabled=0x7f040005;
+    public static final int common_google_signin_btn_icon_light=0x7f040006;
+    public static final int common_google_signin_btn_icon_light_focused=0x7f040007;
+    public static final int common_google_signin_btn_icon_light_normal=0x7f040008;
+    public static final int common_google_signin_btn_icon_light_normal_background=0x7f040009;
+    public static final int common_google_signin_btn_text_dark=0x7f04000a;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f04000b;
+    public static final int common_google_signin_btn_text_dark_normal=0x7f04000c;
+    public static final int common_google_signin_btn_text_dark_normal_background=0x7f04000d;
+    public static final int common_google_signin_btn_text_disabled=0x7f04000e;
+    public static final int common_google_signin_btn_text_light=0x7f04000f;
+    public static final int common_google_signin_btn_text_light_focused=0x7f040010;
+    public static final int common_google_signin_btn_text_light_normal=0x7f040011;
+    public static final int common_google_signin_btn_text_light_normal_background=0x7f040012;
+    public static final int googleg_disabled_color_18=0x7f040013;
+    public static final int googleg_standard_color_18=0x7f040014;
+    public static final int launch_background=0x7f040015;
+    public static final int notification_action_background=0x7f040016;
+    public static final int notification_bg=0x7f040017;
+    public static final int notification_bg_low=0x7f040018;
+    public static final int notification_bg_low_normal=0x7f040019;
+    public static final int notification_bg_low_pressed=0x7f04001a;
+    public static final int notification_bg_normal=0x7f04001b;
+    public static final int notification_bg_normal_pressed=0x7f04001c;
+    public static final int notification_icon_background=0x7f04001d;
+    public static final int notification_template_icon_bg=0x7f04001e;
+    public static final int notification_template_icon_low_bg=0x7f04001f;
+    public static final int notification_tile_bg=0x7f040020;
+    public static final int notify_panel_notification_icon_bg=0x7f040021;
   }
   public static final class id {
     public static final int accessibility_action_clickable_span=0x7f050000;
@@ -425,75 +641,87 @@ public final class R {
     public static final int action_image=0x7f050024;
     public static final int action_text=0x7f050025;
     public static final int actions=0x7f050026;
-    public static final int all=0x7f050027;
-    public static final int async=0x7f050028;
-    public static final int blocking=0x7f050029;
-    public static final int bottom=0x7f05002a;
-    public static final int cancel_action=0x7f05002b;
-    public static final int center=0x7f05002c;
-    public static final int centerCrop=0x7f05002d;
-    public static final int center_horizontal=0x7f05002e;
-    public static final int center_vertical=0x7f05002f;
-    public static final int chronometer=0x7f050030;
-    public static final int clip_horizontal=0x7f050031;
-    public static final int clip_vertical=0x7f050032;
-    public static final int dialog_button=0x7f050033;
-    public static final int end=0x7f050034;
-    public static final int end_padder=0x7f050035;
-    public static final int fill=0x7f050036;
-    public static final int fill_horizontal=0x7f050037;
-    public static final int fill_vertical=0x7f050038;
-    public static final int fitCenter=0x7f050039;
-    public static final int fitXY=0x7f05003a;
-    public static final int forever=0x7f05003b;
-    public static final int icon=0x7f05003c;
-    public static final int icon_group=0x7f05003d;
-    public static final int info=0x7f05003e;
-    public static final int italic=0x7f05003f;
-    public static final int left=0x7f050040;
-    public static final int line1=0x7f050041;
-    public static final int line3=0x7f050042;
-    public static final int media_actions=0x7f050043;
-    public static final int none=0x7f050044;
-    public static final int normal=0x7f050045;
-    public static final int notification_background=0x7f050046;
-    public static final int notification_main_column=0x7f050047;
-    public static final int notification_main_column_container=0x7f050048;
-    public static final int right=0x7f050049;
-    public static final int right_icon=0x7f05004a;
-    public static final int right_side=0x7f05004b;
-    public static final int start=0x7f05004c;
-    public static final int status_bar_latest_event_content=0x7f05004d;
-    public static final int tag_accessibility_actions=0x7f05004e;
-    public static final int tag_accessibility_clickable_spans=0x7f05004f;
-    public static final int tag_accessibility_heading=0x7f050050;
-    public static final int tag_accessibility_pane_title=0x7f050051;
-    public static final int tag_screen_reader_focusable=0x7f050052;
-    public static final int tag_transition_group=0x7f050053;
-    public static final int tag_unhandled_key_event_manager=0x7f050054;
-    public static final int tag_unhandled_key_listeners=0x7f050055;
-    public static final int text=0x7f050056;
-    public static final int text2=0x7f050057;
-    public static final int time=0x7f050058;
-    public static final int title=0x7f050059;
-    public static final int top=0x7f05005a;
-    public static final int zxing_back_button=0x7f05005b;
-    public static final int zxing_barcode_scanner=0x7f05005c;
-    public static final int zxing_barcode_surface=0x7f05005d;
-    public static final int zxing_camera_closed=0x7f05005e;
-    public static final int zxing_camera_error=0x7f05005f;
-    public static final int zxing_decode=0x7f050060;
-    public static final int zxing_decode_failed=0x7f050061;
-    public static final int zxing_decode_succeeded=0x7f050062;
-    public static final int zxing_possible_result_points=0x7f050063;
-    public static final int zxing_preview_failed=0x7f050064;
-    public static final int zxing_prewiew_size_ready=0x7f050065;
-    public static final int zxing_status_view=0x7f050066;
-    public static final int zxing_viewfinder_view=0x7f050067;
+    public static final int adjust_height=0x7f050027;
+    public static final int adjust_width=0x7f050028;
+    public static final int all=0x7f050029;
+    public static final int async=0x7f05002a;
+    public static final int auto=0x7f05002b;
+    public static final int blocking=0x7f05002c;
+    public static final int bottom=0x7f05002d;
+    public static final int cancel_action=0x7f05002e;
+    public static final int center=0x7f05002f;
+    public static final int centerCrop=0x7f050030;
+    public static final int center_horizontal=0x7f050031;
+    public static final int center_vertical=0x7f050032;
+    public static final int chronometer=0x7f050033;
+    public static final int clip_horizontal=0x7f050034;
+    public static final int clip_vertical=0x7f050035;
+    public static final int dark=0x7f050036;
+    public static final int dialog_button=0x7f050037;
+    public static final int end=0x7f050038;
+    public static final int end_padder=0x7f050039;
+    public static final int fill=0x7f05003a;
+    public static final int fill_horizontal=0x7f05003b;
+    public static final int fill_vertical=0x7f05003c;
+    public static final int fitCenter=0x7f05003d;
+    public static final int fitXY=0x7f05003e;
+    public static final int forever=0x7f05003f;
+    public static final int hybrid=0x7f050040;
+    public static final int icon=0x7f050041;
+    public static final int icon_group=0x7f050042;
+    public static final int icon_only=0x7f050043;
+    public static final int info=0x7f050044;
+    public static final int italic=0x7f050045;
+    public static final int left=0x7f050046;
+    public static final int light=0x7f050047;
+    public static final int line1=0x7f050048;
+    public static final int line3=0x7f050049;
+    public static final int media_actions=0x7f05004a;
+    public static final int none=0x7f05004b;
+    public static final int normal=0x7f05004c;
+    public static final int notification_background=0x7f05004d;
+    public static final int notification_main_column=0x7f05004e;
+    public static final int notification_main_column_container=0x7f05004f;
+    public static final int right=0x7f050050;
+    public static final int right_icon=0x7f050051;
+    public static final int right_side=0x7f050052;
+    public static final int satellite=0x7f050053;
+    public static final int standard=0x7f050054;
+    public static final int start=0x7f050055;
+    public static final int status_bar_latest_event_content=0x7f050056;
+    public static final int tag_accessibility_actions=0x7f050057;
+    public static final int tag_accessibility_clickable_spans=0x7f050058;
+    public static final int tag_accessibility_heading=0x7f050059;
+    public static final int tag_accessibility_pane_title=0x7f05005a;
+    public static final int tag_screen_reader_focusable=0x7f05005b;
+    public static final int tag_transition_group=0x7f05005c;
+    public static final int tag_unhandled_key_event_manager=0x7f05005d;
+    public static final int tag_unhandled_key_listeners=0x7f05005e;
+    public static final int terrain=0x7f05005f;
+    public static final int text=0x7f050060;
+    public static final int text2=0x7f050061;
+    public static final int time=0x7f050062;
+    public static final int title=0x7f050063;
+    public static final int top=0x7f050064;
+    public static final int wide=0x7f050065;
+    public static final int zxing_back_button=0x7f050066;
+    public static final int zxing_barcode_scanner=0x7f050067;
+    public static final int zxing_barcode_surface=0x7f050068;
+    public static final int zxing_camera_closed=0x7f050069;
+    public static final int zxing_camera_error=0x7f05006a;
+    public static final int zxing_decode=0x7f05006b;
+    public static final int zxing_decode_failed=0x7f05006c;
+    public static final int zxing_decode_succeeded=0x7f05006d;
+    public static final int zxing_possible_result_points=0x7f05006e;
+    public static final int zxing_preview_failed=0x7f05006f;
+    public static final int zxing_prewiew_size_ready=0x7f050070;
+    public static final int zxing_status_view=0x7f050071;
+    public static final int zxing_viewfinder_view=0x7f050072;
   }
   public static final class integer {
     public static final int cancel_button_image_alpha=0x7f060000;
-    public static final int status_bar_notification_info_maxnum=0x7f060001;
+    public static final int google_play_services_version=0x7f060001;
+    public static final int status_bar_notification_info_maxnum=0x7f060002;
   }
   public static final class layout {
     public static final int custom_dialog=0x7f070000;
@@ -517,16 +745,46 @@ public final class R {
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f080000;
+    public static final int launcher_icon=0x7f080001;
   }
   public static final class raw {
     public static final int zxing_beep=0x7f090000;
   }
   public static final class string {
-    public static final int status_bar_notification_info_overflow=0x7f0a0000;
-    public static final int zxing_app_name=0x7f0a0001;
-    public static final int zxing_button_ok=0x7f0a0002;
-    public static final int zxing_msg_camera_framework_bug=0x7f0a0003;
-    public static final int zxing_msg_default_status=0x7f0a0004;
+    public static final int app_version=0x7f0a0000;
+    public static final int common_google_play_services_enable_button=0x7f0a0001;
+    public static final int common_google_play_services_enable_text=0x7f0a0002;
+    public static final int common_google_play_services_enable_title=0x7f0a0003;
+    public static final int common_google_play_services_install_button=0x7f0a0004;
+    public static final int common_google_play_services_install_text=0x7f0a0005;
+    public static final int common_google_play_services_install_title=0x7f0a0006;
+    public static final int common_google_play_services_notification_channel_name=0x7f0a0007;
+    public static final int common_google_play_services_notification_ticker=0x7f0a0008;
+    public static final int common_google_play_services_unknown_issue=0x7f0a0009;
+    public static final int common_google_play_services_unsupported_text=0x7f0a000a;
+    public static final int common_google_play_services_update_button=0x7f0a000b;
+    public static final int common_google_play_services_update_text=0x7f0a000c;
+    public static final int common_google_play_services_update_title=0x7f0a000d;
+    public static final int common_google_play_services_updating_text=0x7f0a000e;
+    public static final int common_google_play_services_wear_update_text=0x7f0a000f;
+    public static final int common_open_on_phone=0x7f0a0010;
+    public static final int common_signin_button_text=0x7f0a0011;
+    public static final int common_signin_button_text_long=0x7f0a0012;
+    public static final int define_zxingandroidembedded=0x7f0a0013;
+    public static final int library_zxingandroidembedded_author=0x7f0a0014;
+    public static final int library_zxingandroidembedded_authorWebsite=0x7f0a0015;
+    public static final int library_zxingandroidembedded_isOpenSource=0x7f0a0016;
+    public static final int library_zxingandroidembedded_libraryDescription=0x7f0a0017;
+    public static final int library_zxingandroidembedded_libraryName=0x7f0a0018;
+    public static final int library_zxingandroidembedded_libraryVersion=0x7f0a0019;
+    public static final int library_zxingandroidembedded_libraryWebsite=0x7f0a001a;
+    public static final int library_zxingandroidembedded_licenseId=0x7f0a001b;
+    public static final int library_zxingandroidembedded_repositoryLink=0x7f0a001c;
+    public static final int status_bar_notification_info_overflow=0x7f0a001d;
+    public static final int zxing_app_name=0x7f0a001e;
+    public static final int zxing_button_ok=0x7f0a001f;
+    public static final int zxing_msg_camera_framework_bug=0x7f0a0020;
+    public static final int zxing_msg_default_status=0x7f0a0021;
   }
   public static final class style {
     public static final int LaunchTheme=0x7f0b0000;
@@ -610,7 +868,7 @@ public final class R {
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f01000c, 0x7f010013
+      0x7f010019, 0x7f010027
     };
     /**
      * <p>
@@ -672,8 +930,8 @@ public final class R {
      * @see #CoordinatorLayout_Layout_layout_keyline
      */
     public static final int[] CoordinatorLayout_Layout={
-      0x010100b3, 0x7f01000d, 0x7f01000e, 0x7f01000f, 
-      0x7f010010, 0x7f010011, 0x7f010012
+      0x010100b3, 0x7f01001e, 0x7f01001f, 0x7f010020, 
+      0x7f010021, 0x7f010022, 0x7f010023
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -848,8 +1106,8 @@ public final class R {
      * @see #FontFamily_fontProviderQuery
      */
     public static final int[] FontFamily={
-      0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 
-      0x7f010007, 0x7f010008
+      0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 
+      0x7f010012, 0x7f010013
     };
     /**
      * <p>
@@ -985,8 +1243,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f010002, 0x7f010009, 0x7f01000a, 
-      0x7f01000b, 0x7f010014
+      0x01010570, 0x7f01000d, 0x7f010014, 0x7f010015, 
+      0x7f010016, 0x7f010028
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -1363,6 +1621,441 @@ public final class R {
      */
     public static final int GradientColorItem_android_offset=1;
     /**
+     * Attributes that can be used with a LoadingImageView.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #LoadingImageView_circleCrop com.ezpass.smopaye_mobile:circleCrop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatio com.ezpass.smopaye_mobile:imageAspectRatio}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust com.ezpass.smopaye_mobile:imageAspectRatioAdjust}</code></td><td></td></tr>
+     * </table>
+     * @see #LoadingImageView_circleCrop
+     * @see #LoadingImageView_imageAspectRatio
+     * @see #LoadingImageView_imageAspectRatioAdjust
+     */
+    public static final int[] LoadingImageView={
+      0x7f01000a, 0x7f010017, 0x7f010018
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#circleCrop}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:circleCrop
+     */
+    public static final int LoadingImageView_circleCrop=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#imageAspectRatio}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:imageAspectRatio
+     */
+    public static final int LoadingImageView_imageAspectRatio=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#imageAspectRatioAdjust}
+     * attribute's value can be found in the {@link #LoadingImageView} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>adjust_height</td><td>2</td><td></td></tr>
+     * <tr><td>adjust_width</td><td>1</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.ezpass.smopaye_mobile:imageAspectRatioAdjust
+     */
+    public static final int LoadingImageView_imageAspectRatioAdjust=2;
+    /**
+     * Attributes that can be used with a MapAttrs.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #MapAttrs_ambientEnabled com.ezpass.smopaye_mobile:ambientEnabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraBearing com.ezpass.smopaye_mobile:cameraBearing}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraMaxZoomPreference com.ezpass.smopaye_mobile:cameraMaxZoomPreference}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraMinZoomPreference com.ezpass.smopaye_mobile:cameraMinZoomPreference}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraTargetLat com.ezpass.smopaye_mobile:cameraTargetLat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraTargetLng com.ezpass.smopaye_mobile:cameraTargetLng}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraTilt com.ezpass.smopaye_mobile:cameraTilt}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_cameraZoom com.ezpass.smopaye_mobile:cameraZoom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLatitude com.ezpass.smopaye_mobile:latLngBoundsNorthEastLatitude}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_latLngBoundsNorthEastLongitude com.ezpass.smopaye_mobile:latLngBoundsNorthEastLongitude}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLatitude com.ezpass.smopaye_mobile:latLngBoundsSouthWestLatitude}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_latLngBoundsSouthWestLongitude com.ezpass.smopaye_mobile:latLngBoundsSouthWestLongitude}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_liteMode com.ezpass.smopaye_mobile:liteMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_mapType com.ezpass.smopaye_mobile:mapType}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiCompass com.ezpass.smopaye_mobile:uiCompass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiMapToolbar com.ezpass.smopaye_mobile:uiMapToolbar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiRotateGestures com.ezpass.smopaye_mobile:uiRotateGestures}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiScrollGestures com.ezpass.smopaye_mobile:uiScrollGestures}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiScrollGesturesDuringRotateOrZoom com.ezpass.smopaye_mobile:uiScrollGesturesDuringRotateOrZoom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiTiltGestures com.ezpass.smopaye_mobile:uiTiltGestures}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiZoomControls com.ezpass.smopaye_mobile:uiZoomControls}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_uiZoomGestures com.ezpass.smopaye_mobile:uiZoomGestures}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_useViewLifecycle com.ezpass.smopaye_mobile:useViewLifecycle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MapAttrs_zOrderOnTop com.ezpass.smopaye_mobile:zOrderOnTop}</code></td><td></td></tr>
+     * </table>
+     * @see #MapAttrs_ambientEnabled
+     * @see #MapAttrs_cameraBearing
+     * @see #MapAttrs_cameraMaxZoomPreference
+     * @see #MapAttrs_cameraMinZoomPreference
+     * @see #MapAttrs_cameraTargetLat
+     * @see #MapAttrs_cameraTargetLng
+     * @see #MapAttrs_cameraTilt
+     * @see #MapAttrs_cameraZoom
+     * @see #MapAttrs_latLngBoundsNorthEastLatitude
+     * @see #MapAttrs_latLngBoundsNorthEastLongitude
+     * @see #MapAttrs_latLngBoundsSouthWestLatitude
+     * @see #MapAttrs_latLngBoundsSouthWestLongitude
+     * @see #MapAttrs_liteMode
+     * @see #MapAttrs_mapType
+     * @see #MapAttrs_uiCompass
+     * @see #MapAttrs_uiMapToolbar
+     * @see #MapAttrs_uiRotateGestures
+     * @see #MapAttrs_uiScrollGestures
+     * @see #MapAttrs_uiScrollGesturesDuringRotateOrZoom
+     * @see #MapAttrs_uiTiltGestures
+     * @see #MapAttrs_uiZoomControls
+     * @see #MapAttrs_uiZoomGestures
+     * @see #MapAttrs_useViewLifecycle
+     * @see #MapAttrs_zOrderOnTop
+     */
+    public static final int[] MapAttrs={
+      0x7f010001, 0x7f010003, 0x7f010004, 0x7f010005, 
+      0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 
+      0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d, 
+      0x7f010024, 0x7f010025, 0x7f010029, 0x7f01002a, 
+      0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e, 
+      0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#ambientEnabled}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:ambientEnabled
+     */
+    public static final int MapAttrs_ambientEnabled=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraBearing}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraBearing
+     */
+    public static final int MapAttrs_cameraBearing=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraMaxZoomPreference}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraMaxZoomPreference
+     */
+    public static final int MapAttrs_cameraMaxZoomPreference=2;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraMinZoomPreference}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraMinZoomPreference
+     */
+    public static final int MapAttrs_cameraMinZoomPreference=3;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraTargetLat}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraTargetLat
+     */
+    public static final int MapAttrs_cameraTargetLat=4;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraTargetLng}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraTargetLng
+     */
+    public static final int MapAttrs_cameraTargetLng=5;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraTilt}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraTilt
+     */
+    public static final int MapAttrs_cameraTilt=6;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#cameraZoom}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:cameraZoom
+     */
+    public static final int MapAttrs_cameraZoom=7;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#latLngBoundsNorthEastLatitude}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:latLngBoundsNorthEastLatitude
+     */
+    public static final int MapAttrs_latLngBoundsNorthEastLatitude=8;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#latLngBoundsNorthEastLongitude}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:latLngBoundsNorthEastLongitude
+     */
+    public static final int MapAttrs_latLngBoundsNorthEastLongitude=9;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#latLngBoundsSouthWestLatitude}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:latLngBoundsSouthWestLatitude
+     */
+    public static final int MapAttrs_latLngBoundsSouthWestLatitude=10;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#latLngBoundsSouthWestLongitude}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a floating point value, such as "<code>1.2</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:latLngBoundsSouthWestLongitude
+     */
+    public static final int MapAttrs_latLngBoundsSouthWestLongitude=11;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#liteMode}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:liteMode
+     */
+    public static final int MapAttrs_liteMode=12;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#mapType}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>hybrid</td><td>4</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>normal</td><td>1</td><td></td></tr>
+     * <tr><td>satellite</td><td>2</td><td></td></tr>
+     * <tr><td>terrain</td><td>3</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.ezpass.smopaye_mobile:mapType
+     */
+    public static final int MapAttrs_mapType=13;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiCompass}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiCompass
+     */
+    public static final int MapAttrs_uiCompass=14;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiMapToolbar}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiMapToolbar
+     */
+    public static final int MapAttrs_uiMapToolbar=15;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiRotateGestures}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiRotateGestures
+     */
+    public static final int MapAttrs_uiRotateGestures=16;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiScrollGestures}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiScrollGestures
+     */
+    public static final int MapAttrs_uiScrollGestures=17;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiScrollGesturesDuringRotateOrZoom}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiScrollGesturesDuringRotateOrZoom
+     */
+    public static final int MapAttrs_uiScrollGesturesDuringRotateOrZoom=18;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiTiltGestures}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiTiltGestures
+     */
+    public static final int MapAttrs_uiTiltGestures=19;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiZoomControls}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiZoomControls
+     */
+    public static final int MapAttrs_uiZoomControls=20;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#uiZoomGestures}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:uiZoomGestures
+     */
+    public static final int MapAttrs_uiZoomGestures=21;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#useViewLifecycle}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:useViewLifecycle
+     */
+    public static final int MapAttrs_useViewLifecycle=22;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#zOrderOnTop}
+     * attribute's value can be found in the {@link #MapAttrs} array.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.ezpass.smopaye_mobile:zOrderOnTop
+     */
+    public static final int MapAttrs_zOrderOnTop=23;
+    /**
+     * Attributes that can be used with a SignInButton.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #SignInButton_buttonSize com.ezpass.smopaye_mobile:buttonSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_colorScheme com.ezpass.smopaye_mobile:colorScheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SignInButton_scopeUris com.ezpass.smopaye_mobile:scopeUris}</code></td><td></td></tr>
+     * </table>
+     * @see #SignInButton_buttonSize
+     * @see #SignInButton_colorScheme
+     * @see #SignInButton_scopeUris
+     */
+    public static final int[] SignInButton={
+      0x7f010002, 0x7f01000b, 0x7f010026
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#buttonSize}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>icon_only</td><td>2</td><td></td></tr>
+     * <tr><td>standard</td><td>0</td><td></td></tr>
+     * <tr><td>wide</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.ezpass.smopaye_mobile:buttonSize
+     */
+    public static final int SignInButton_buttonSize=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#colorScheme}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>auto</td><td>2</td><td></td></tr>
+     * <tr><td>dark</td><td>0</td><td></td></tr>
+     * <tr><td>light</td><td>1</td><td></td></tr>
+     * </table>
+     *
+     * @attr name com.ezpass.smopaye_mobile:colorScheme
+     */
+    public static final int SignInButton_colorScheme=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#scopeUris}
+     * attribute's value can be found in the {@link #SignInButton} array.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.ezpass.smopaye_mobile:scopeUris
+     */
+    public static final int SignInButton_scopeUris=2;
+    /**
      * Attributes that can be used with a zxing_camera_preview.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -1380,7 +2073,7 @@ public final class R {
      * @see #zxing_camera_preview_zxing_use_texture_view
      */
     public static final int[] zxing_camera_preview={
-      0x7f010015, 0x7f010016, 0x7f010018, 0x7f01001b
+      0x7f010033, 0x7f010034, 0x7f010036, 0x7f010039
     };
     /**
      * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#zxing_framing_rect_height}
@@ -1454,7 +2147,7 @@ public final class R {
      * @see #zxing_finder_zxing_viewfinder_mask
      */
     public static final int[] zxing_finder={
-      0x7f010017, 0x7f010019, 0x7f01001c, 0x7f01001d
+      0x7f010035, 0x7f010037, 0x7f01003a, 0x7f01003b
     };
     /**
      * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#zxing_possible_result_points}
@@ -1512,7 +2205,7 @@ public final class R {
      * @see #zxing_view_zxing_scanner_layout
      */
     public static final int[] zxing_view={
-      0x7f01001a
+      0x7f010038
     };
     /**
      * <p>This symbol is the offset where the {@link com.ezpass.smopaye_mobile.R.attr#zxing_scanner_layout}

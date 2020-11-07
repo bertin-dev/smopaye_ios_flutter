@@ -1,5 +1,16 @@
 com.ezpass.smopaye_mobile
 attr alpha
+attr ambientEnabled
+attr buttonSize
+attr cameraBearing
+attr cameraMaxZoomPreference
+attr cameraMinZoomPreference
+attr cameraTargetLat
+attr cameraTargetLng
+attr cameraTilt
+attr cameraZoom
+attr circleCrop
+attr colorScheme
 attr coordinatorLayoutStyle
 attr font
 attr fontProviderAuthority
@@ -11,15 +22,34 @@ attr fontProviderQuery
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr keylines
+attr latLngBoundsNorthEastLatitude
+attr latLngBoundsNorthEastLongitude
+attr latLngBoundsSouthWestLatitude
+attr latLngBoundsSouthWestLongitude
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
 attr layout_dodgeInsetEdges
 attr layout_insetEdge
 attr layout_keyline
+attr liteMode
+attr mapType
+attr scopeUris
 attr statusBarBackground
 attr ttcIndex
+attr uiCompass
+attr uiMapToolbar
+attr uiRotateGestures
+attr uiScrollGestures
+attr uiScrollGesturesDuringRotateOrZoom
+attr uiTiltGestures
+attr uiZoomControls
+attr uiZoomGestures
+attr useViewLifecycle
+attr zOrderOnTop
 attr zxing_framing_rect_height
 attr zxing_framing_rect_width
 attr zxing_possible_result_points
@@ -29,6 +59,17 @@ attr zxing_scanner_layout
 attr zxing_use_texture_view
 attr zxing_viewfinder_laser
 attr zxing_viewfinder_mask
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -72,6 +113,27 @@ dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable launch_background
 drawable notification_action_background
 drawable notification_bg
@@ -124,8 +186,11 @@ id action_divider
 id action_image
 id action_text
 id actions
+id adjust_height
+id adjust_width
 id all
 id async
+id auto
 id blocking
 id bottom
 id cancel_action
@@ -136,6 +201,7 @@ id center_vertical
 id chronometer
 id clip_horizontal
 id clip_vertical
+id dark
 id dialog_button
 id end
 id end_padder
@@ -145,11 +211,14 @@ id fill_vertical
 id fitCenter
 id fitXY
 id forever
+id hybrid
 id icon
 id icon_group
+id icon_only
 id info
 id italic
 id left
+id light
 id line1
 id line3
 id media_actions
@@ -161,6 +230,8 @@ id notification_main_column_container
 id right
 id right_icon
 id right_side
+id satellite
+id standard
 id start
 id status_bar_latest_event_content
 id tag_accessibility_actions
@@ -171,11 +242,13 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id terrain
 id text
 id text2
 id time
 id title
 id top
+id wide
 id zxing_back_button
 id zxing_barcode_scanner
 id zxing_barcode_surface
@@ -190,6 +263,7 @@ id zxing_prewiew_size_ready
 id zxing_status_view
 id zxing_viewfinder_view
 integer cancel_button_image_alpha
+integer google_play_services_version
 integer status_bar_notification_info_maxnum
 layout custom_dialog
 layout notification_action
@@ -210,7 +284,37 @@ layout notification_template_part_time
 layout zxing_barcode_scanner
 layout zxing_capture
 mipmap ic_launcher
+mipmap launcher_icon
 raw zxing_beep
+string app_version
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
+string define_zxingandroidembedded
+string library_zxingandroidembedded_author
+string library_zxingandroidembedded_authorWebsite
+string library_zxingandroidembedded_isOpenSource
+string library_zxingandroidembedded_libraryDescription
+string library_zxingandroidembedded_libraryName
+string library_zxingandroidembedded_libraryVersion
+string library_zxingandroidembedded_libraryWebsite
+string library_zxingandroidembedded_licenseId
+string library_zxingandroidembedded_repositoryLink
 string status_bar_notification_info_overflow
 string zxing_app_name
 string zxing_button_ok
@@ -238,6 +342,9 @@ styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchSt
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MapAttrs ambientEnabled cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable zxing_camera_preview zxing_framing_rect_height zxing_framing_rect_width zxing_preview_scaling_strategy zxing_use_texture_view
 styleable zxing_finder zxing_possible_result_points zxing_result_view zxing_viewfinder_laser zxing_viewfinder_mask
 styleable zxing_view zxing_scanner_layout

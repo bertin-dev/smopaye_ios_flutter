@@ -12,7 +12,7 @@ import 'views/historyTelecollect.dart';
 import 'views/historyTransfer.dart';
 import 'views/smopayeShops.dart';
 import 'views/twitter.dart';
-import 'views/unavailable.dart';
+import 'views/google_map.dart';
 import 'views/assistance.dart';
 import 'views/historic.dart';
 import 'views/manageAcceptor.dart';
@@ -109,8 +109,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => SmopayeShops()); // Route de la page des points Smopaye
       case '/agencies':
         return MaterialPageRoute(builder: (context) => SmopayeAgencies()); // Route de la page des points Smopaye
-      case '/unavailable':
-        return MaterialPageRoute(builder: (context) => ServiceUnavailable()); // Route de la page montrant un service non disponible
+      case '/google_map':
+        return MaterialPageRoute(builder: (context) => MyGoogleMap()); // Route de la page montrant un service non disponible
       case '/historic':
         return MaterialPageRoute(builder: (context) => Historic()); // Route de la page aui liste les historiques
       case '/tutorial':

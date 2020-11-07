@@ -39,7 +39,6 @@ class _RenewSubscriptionState extends State<RenewSubscription> {
     final hv =MediaQuery.of(context).size.height/100;
     final wv =MediaQuery.of(context).size.width/100;
     return Scaffold(
-      appBar: DefaultAppBar(title: "Renouveller Abonnement",),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(children: <Widget>[

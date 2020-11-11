@@ -6,9 +6,12 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:smopaye_mobile/models/abonnement.dart';
 import 'package:smopaye_mobile/models/compte.dart';
+import 'package:smopaye_mobile/models/dataAllUserCard.dart';
 import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/dataUserCard.dart';
+import 'package:smopaye_mobile/models/listAllUserCardResponse.dart';
 import 'package:smopaye_mobile/utils/endpoints.dart';
 
 class AuthService {
@@ -134,6 +137,65 @@ class AuthService {
       }
     }
     return itemAbonnement;
+  }
+
+
+  /* Lister all Card using by user */
+  Future<List<DataAllUserCard>> findAllUserCards({ @required int user_id }) async {
+
+    String myUrl =  Endpoints.baseUrl + Endpoints.cardUser + "$user_id/children";
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+    var response = await http.get( myUrl, headers: headers);
+    print('11111111111 ${response.statusCode}');
+    print('BBBBBBBBBBBBBBB ${jsonDecode(response.body)}');
+
+    List<DataAllUserCard> itemDataAllUserCard = [];
+    if(response.statusCode == 200){
+      Map<String, dynamic> body = jsonDecode(response.body);
+
+      //object
+      ListAllUserCardResponse dataAllUserCard = ListAllUserCardResponse.fromJson(body);
+
+      //ArrayList
+      for(var item in dataAllUserCard.data){
+        //Abonnement abon = item;
+        print(item.phone);
+        itemDataAllUserCard.add(item);
+      }
+    }
+    return itemDataAllUserCard;
+
+
+  }
+
+  //liste la carte principale de l'utilisateur connecté
+  Future<DataAllUserCard> userProfilOwnerCard(@required String phone) async{
+    String url = Endpoints.baseUrl + Endpoints.profilUser + phone;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+    var response = await http.get( url, headers: headers);
+    DataAllUserCard dataAllUserCard;
+    if(response.statusCode == 200){
+      Map<String, dynamic> body = jsonDecode(response.body);
+
+      //object
+      dataAllUserCard = DataAllUserCard.fromJson(body);
+      print(dataAllUserCard.phone);
+    }
+    return dataAllUserCard;
   }
 
 
@@ -603,22 +665,6 @@ class AuthService {
   static dynamic findAllCards() async {
 
     String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/card";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.get(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        });
-    return response;
-  }
-
-  /* Lister all Card using by user */
-  static dynamic findAllUserCards({ @required int user_id }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/user/$user_id/children";
     final prefs = await SharedPreferences.getInstance();
     final key = 'access_token';
     final value = prefs.get(key) ?? 0;

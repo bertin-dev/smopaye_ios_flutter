@@ -8,6 +8,7 @@ class Endpoints {
   static String login = 'api/auth/login';
   static String reset_password = 'api/renitializePassword';
   static String profilUser = 'api/user/profile/';
+  static String cardUser = 'api/user/';
 
 
   static String register = '/register';

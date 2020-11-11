@@ -15,7 +15,7 @@ class ReloadAccount extends StatefulWidget {
 class _ReloadAccountState extends State<ReloadAccount> {
   
   final _reloadFormKey = GlobalKey<FormState>();
-  TextEditingController _accountNumberController = new TextEditingController();
+  TextEditingController _phoneController = new TextEditingController();
   TextEditingController _amountController = new TextEditingController();
 
   bool _buttonState = true;
@@ -25,12 +25,11 @@ class _ReloadAccountState extends State<ReloadAccount> {
   Widget build(BuildContext context) {
     final hv =MediaQuery.of(context).size.height/100;
     return Scaffold(
-      appBar: DefaultAppBar(title: "Recharge",),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(children: <Widget>[
           SizedBox(height: hv*3,),
-          InstructionCard(text: "Insérez votre numero de compte et le montant souhaité puis validez",),
+          InstructionCard(text: "Veuillez Insérer votre numéro de téléphone et le montant de recharge, puis valider",),
           SizedBox(height: hv*10,),
 
           Form(
@@ -38,18 +37,19 @@ class _ReloadAccountState extends State<ReloadAccount> {
             autovalidate: _autovalidate,
             child: Column(
               children: <Widget>[
+
                 CustomTextField(
-                  hintText: 'Numéro de compte',
-                  controller: _accountNumberController,
-                  emptyValidatorText: 'Enter account number',
-                  keyboardType: TextInputType.text,
-                  validator: (str) => str.isEmpty ? 'account number Field cannot be empty' : null,
-                  labelColor: Color(0xff039BE5)
+                  maxLength: 9,
+                  hintText: 'Téléphone',
+                  controller: _phoneController,
+                  emptyValidatorText: 'Entrez un numéro',
+                  keyboardType: TextInputType.phone,
+                  validator: _phoneFieldValidator,
+                  labelColor: Color(0xff039BE5),
                 ),
 
-                SizedBox(height: hv*3,),
-
                 CustomTextField(
+                  maxLength: 7,
                   hintText: 'Montant',
                   controller: _amountController,
                   emptyValidatorText: 'Enter amount',
@@ -86,7 +86,7 @@ class _ReloadAccountState extends State<ReloadAccount> {
  
   _reload (BuildContext context) async {
 
-    print("accountnber: ${_accountNumberController.text}\namount: ${_amountController.text}\n");
+    print("phone: ${_phoneController.text}\namount: ${_amountController.text}\n");
       setState(() {
        _autovalidate = true; 
       });
@@ -111,6 +111,22 @@ class _ReloadAccountState extends State<ReloadAccount> {
        _autovalidate = true; 
       });
       }
+  }
+
+  //Fonction de validation du numéro de téléphone
+
+  String _phoneFieldValidator(String value) {
+    if (value.isEmpty) {
+      return "Entrez un numéro";
+    }
+    String p = "^[:;,\-@0-9a-zA-Zâéè'.\s]{9}\$";
+    RegExp regExp = new RegExp(p);
+    if (regExp.hasMatch(value)) {
+      // So, the phone nber is valid
+      return null;
+    }
+    // The pattern of the phone nber didn't match the regex above.
+    return 'Phone number must be 9 characters long';
   }
 
   String _amountFieldValidator (String value) {

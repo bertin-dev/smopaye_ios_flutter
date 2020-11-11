@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:smopaye_mobile/views/menuReloadAccount.dart';
 import 'package:smopaye_mobile/views/menuSubscription.dart';
+import 'package:smopaye_mobile/views/menuTransfer.dart';
 import 'views/facebook.dart';
 import 'views/historyDebit.dart';
 import 'views/onlineSupport.dart';
@@ -67,8 +69,8 @@ class Routes {
 
       case '/editAccount':
         return MaterialPageRoute(builder: (context) => EditAccount());   // Route de la page d'édition de compte
-      case '/transfer':
-        return MaterialPageRoute(builder: (context) => Transfer());   // Route de la page de transfert d'argent
+      case '/menuTransfer':
+        return MaterialPageRoute(builder: (context) => MenuTransfer());   // Route de la page du Menu transfert d'argent
       case '/menuSubscription':
         return MaterialPageRoute(builder: (context) => MenuSubscription());   // Route de la page du Menu Abonnement
       case '/renewSubscription':
@@ -78,7 +80,7 @@ class Routes {
       case '/payInvoice':
         return MaterialPageRoute(builder: (context) => PayInvoice());   // Route de la page de paiement de facture
       case '/reload':
-        return MaterialPageRoute(builder: (context) => ReloadAccount());   // Route de la page de recharge de compte
+        return MaterialPageRoute(builder: (context) => MenuReloadAccount());   // Route de la page de recharge de compte
       case '/check':
         return MaterialPageRoute(builder: (context) => CheckBalance());   // Route de la page de vérification de solde
       case '/withraw':

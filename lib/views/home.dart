@@ -170,7 +170,7 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Column(children: <Widget>[
                   HomeCommands(
-                      label: "Faire un Retrait",
+                      label: "Retrait",
                       function: () {
                         Navigator.pushNamed(context, '/withraw');
                       },
@@ -208,7 +208,7 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Column(children: <Widget>[
                   HomeCommands(
-                      label: "Debit",
+                      label: "Debit Carte",
                       function: () {
                         Navigator.pushNamed(context, '/debit');
                       },
@@ -236,10 +236,10 @@ class _HomeState extends State<Home> {
                   HomeCommands(
                       label: "Consulter Recette",
                       function: () {
-                        Navigator.pushNamed(context, '/check');
+                        Navigator.pushNamed(context, '/revenue');
                       },
                       icon: SizedBox(child: Image.asset(
-                        'assets/images/layer11.png', width: 35,
+                        'assets/images/recette.png', width: 35,
                         height: 35.0,))
                   ),
                 ],),

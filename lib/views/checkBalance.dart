@@ -20,7 +20,7 @@ class _CheckBalanceState extends State<CheckBalance> {
   final _checkBalanceFormKey = GlobalKey<FormState>();
   final _checkPasswordFormKey = GlobalKey<FormState>();
 
-  TextEditingController _accountNumberController = new TextEditingController();
+  TextEditingController _cardNumberController = new TextEditingController();
   TextEditingController _passwordController = new TextEditingController();
 
   String _balanceType = "deposit";
@@ -32,12 +32,12 @@ class _CheckBalanceState extends State<CheckBalance> {
   Widget build(BuildContext context) {
     final hv =MediaQuery.of(context).size.height/100;
     return Scaffold(
-      appBar: DefaultAppBar(title: "Recharge",),
+      appBar: DefaultAppBar(title: "Vérifier son solde",),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(children: <Widget>[
           SizedBox(height: hv*3,),
-          InstructionCard(text: "Insérez le numero de compte du bénéficiaire et le montant à transférer puis validez",),
+          InstructionCard(text: "Veuillez insérer le numéro de carte et selectionner le type de solde, puis appuyer sur consulter.",),
           SizedBox(height: hv*10,),
 
           Form(
@@ -46,23 +46,24 @@ class _CheckBalanceState extends State<CheckBalance> {
             child: Column(
               children: <Widget>[
                 CustomTextField(
-                  hintText: 'Numéro de compte du bénéficiaire',
-                  controller: _accountNumberController,
-                  emptyValidatorText: 'Enter account number',
+                  maxLength: 8,
+                  hintText: 'Numéro de carte',
+                  controller: _cardNumberController,
+                  emptyValidatorText: 'Entrer votre numéro de carte',
                   keyboardType: TextInputType.text,
-                  validator: (str) => str.isEmpty ? 'account number Field cannot be empty' : null,
+                  validator: (str) => str.isEmpty ? 'Le numéro de carte ne peut-être vide' : null,
                   labelColor: Color(0xff039BE5)
                 ),
 
                 SizedBox(height: hv*3,),
 
                 CustomDropDownField(
-                  label: "Balance Type:",
+                  label: "Type de solde:",
                    onChangedFunc: (String value) {
                             setState(() {
                               _balanceType = value;
                             });
-                          }, hintText: "Votre sexe", 
+                          }, hintText: "solde",
                   items: [
                             DropdownMenuItem<String>(
                               child: Text('DEPOT', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
@@ -70,7 +71,7 @@ class _CheckBalanceState extends State<CheckBalance> {
                             ),
                             DropdownMenuItem<String>(
                               child: Text('UNITE', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
-                              value: 'unit',
+                              value: 'unity',
                             )
                           ],
                           value: _balanceType,
@@ -104,7 +105,7 @@ class _CheckBalanceState extends State<CheckBalance> {
  
   _checkBalance (BuildContext context) async {
 
-    print("accountnber: ${_accountNumberController.text}\n\n");
+    print("accountnber: ${_cardNumberController.text}\n\n");
       setState(() {
        _autovalidate = true; 
       });
@@ -183,7 +184,7 @@ class _CheckBalanceState extends State<CheckBalance> {
           return 
           DefaultAlertDialog(
             title: "Information",
-            message: "Le Solde $_balanceType de votre compte ${_accountNumberController.text} est de: 0 fcfa",
+            message: "Le Solde $_balanceType de votre compte ${_cardNumberController.text} est de: 0 fcfa",
             icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
           );
           

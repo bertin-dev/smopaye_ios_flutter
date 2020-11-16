@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,6 +8,8 @@ import 'package:smopaye_mobile/models/dataAllUserCard.dart';
 import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:smopaye_mobile/models/dataUserCard.dart';
 import 'package:smopaye_mobile/services/authService.dart';
+import 'package:smopaye_mobile/views/widgets/alertDialogs/defaultDialog.dart';
+import 'package:smopaye_mobile/views/widgets/form/textField.dart';
 import 'package:smopaye_mobile/views/widgets/instructionCard.dart';
 
 class ListAllCards extends StatefulWidget {
@@ -17,6 +21,10 @@ class ListAllCards extends StatefulWidget {
 class _ListAllCardsState extends State<ListAllCards> {
   String tel = "";
   bool rememberMe = false;
+  bool rememberMe1 = false;
+  final _amountFormKey = GlobalKey<FormState>();
+  TextEditingController _amountController = new TextEditingController();
+  String cardOwner = "";
 
   @override
   void initState() {
@@ -142,6 +150,8 @@ class _ListAllCardsState extends State<ListAllCards> {
   }
 
   Widget showOwnerCard(DataAllUserCard dataAllUserCard){
+      cardOwner = dataAllUserCard.cards[0].code_number;
+
     return ListView.builder(
       itemCount: dataAllUserCard.cards.length,
       itemBuilder: (BuildContext context, int position){
@@ -178,7 +188,7 @@ class _ListAllCardsState extends State<ListAllCards> {
                               children: <Widget>[
                                 Checkbox(
                                     value: rememberMe,
-                                    onChanged: _onRememberMeChanged
+                                    onChanged: _OwnerCardChanged
                                 )
                               ]
                           )
@@ -234,8 +244,8 @@ class _ListAllCardsState extends State<ListAllCards> {
                           Column(
                               children: <Widget>[
                               Checkbox(
-                              value: rememberMe,
-                              onChanged: _onRememberMeChanged
+                              value: rememberMe1,
+                              onChanged: _OwnerCardListChanged
                               )
                               ]
                           )
@@ -303,16 +313,163 @@ class _ListAllCardsState extends State<ListAllCards> {
     );
   }
 
-  void _onRememberMeChanged(bool newValue) => setState(() {
+  void _OwnerCardChanged(bool newValue) => setState(() {
     rememberMe = newValue;
 
     if (rememberMe) {
       print('vrai');
-      // TODO: Here goes your functionality that remembers the user.
+
+      Timer(Duration(seconds: 1),
+              (){
+            showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    titlePadding: EdgeInsets.only(top: 15, left: 20),
+                    title: Text("Vous êtes sur le point de recharger la carte N°${cardOwner} Entrez le montant s'il vous plait", style: TextStyle(color: Colors.grey, fontSize: 15.0), ),
+                    content: Form(
+                      key: _amountFormKey,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: CustomTextField(
+                                maxLength: 7,
+                                hintText: 'Montant',
+                                controller: _amountController,
+                                emptyValidatorText: 'Entrer le montant',
+                                keyboardType: TextInputType.number,
+                                validator: _amountFieldValidator,
+                                labelColor: Color(0xff039BE5)
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text("ANNULER", style: TextStyle(color: Colors.red),),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      FlatButton(
+                        child: Text("OK", style: TextStyle(color: Colors.red),),
+                        onPressed: () {
+                          if (_amountFormKey.currentState.validate()) {
+                            Navigator.of(context).pop();
+                            _check();
+                          }
+                        },
+                      ),
+                    ],
+                  );
+                });
+          }
+      );
+      
+      
     } else {
       print('faux');
       // TODO: Forget the user
     }
   });
+
+  void _OwnerCardListChanged(bool newValue1) => setState(() {
+    rememberMe1 = newValue1;
+
+    if (rememberMe1) {
+      print('vrai');
+
+      Timer(Duration(seconds: 1),
+              (){
+            showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    titlePadding: EdgeInsets.only(top: 15, left: 20),
+                    title: Text("Vous êtes sur le point de recharger la carte N°${cardOwner} Entrez le montant s'il vous plait", style: TextStyle(color: Colors.grey, fontSize: 15.0), ),
+                    content: Form(
+                      key: _amountFormKey,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 10),
+                            child: CustomTextField(
+                                maxLength: 7,
+                                hintText: 'Montant',
+                                controller: _amountController,
+                                emptyValidatorText: 'Entrer le montant',
+                                keyboardType: TextInputType.number,
+                                validator: _amountFieldValidator,
+                                labelColor: Color(0xff039BE5)
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text("ANNULER", style: TextStyle(color: Colors.red),),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      FlatButton(
+                        child: Text("OK", style: TextStyle(color: Colors.red),),
+                        onPressed: () {
+                          if (_amountFormKey.currentState.validate()) {
+                            Navigator.of(context).pop();
+                            _check();
+                          }
+                        },
+                      ),
+                    ],
+                  );
+                });
+          }
+      );
+
+
+    } else {
+      print('faux');
+      // TODO: Forget the user
+    }
+  });
+
+
+
+  String _amountFieldValidator (String value) {
+    if (value.isEmpty) {
+      return "Entrez votre mot de passe";
+    }
+    String p = "^(([1-9]*)|(([1-9]*)\.([0-9]*)))\$" ;
+    RegExp regExp = new RegExp(p);
+    if (regExp.hasMatch(value)) {
+      // So, the amount is valid
+      return null;
+    }
+    // The pattern of the amount didn't match the regex above.
+    return 'Enter a valid amount';
+  }
+
+
+  _check () {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "Le Solde de votre compte ${cardOwner} est insuffisant",
+            icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
+          );
+
+      },
+    );
+  }
 
 }

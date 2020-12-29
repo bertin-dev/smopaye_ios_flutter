@@ -30,8 +30,8 @@ import 'views/qr.dart';
 import 'views/tutorial.dart';
 import 'views/website.dart';
 import 'views/withrawal.dart';
-import 'views/withrawalOperator.dart';
-import 'views/withrawalSmopaye.dart';
+import 'views/withrawalAccount.dart';
+import 'views/withrawalCard.dart';
 import 'views/checkBalance.dart';
 import 'views/reloadAccount.dart';
 import 'views/payInvoice.dart';
@@ -85,10 +85,10 @@ class Routes {
         return MaterialPageRoute(builder: (context) => CheckBalance());   // Route de la page de vérification de solde
       case '/withraw':
         return MaterialPageRoute(builder: (context) => Withrawal());   // Route de la page de retrait
-      case '/withrawSmopaye':
-        return MaterialPageRoute(builder: (context) => WithrawalSmopaye());   // Route de la page de retrait pour Smopaye
-      case '/withrawOperator':
-        return MaterialPageRoute(builder: (context) => WithrawalOperator());   // Route de la page de retrait par un opérateur
+      case '/withrawCard':
+        return MaterialPageRoute(builder: (context) => WithrawalCard());   // Route de la page de retrait pour Smopaye
+      case '/withrawAccount':
+        return MaterialPageRoute(builder: (context) => WithrawalAccount());   // Route de la page de retrait par un opérateur
       case '/qr':
         return MaterialPageRoute(builder: (context) => QrCode());   // Route de la page de gestion de QR code
       case '/qrScan':

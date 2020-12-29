@@ -150,7 +150,7 @@ class _AppBottomNavigationState extends State<AppBottomNavigation> {
                   ),
 
                   ListTile(
-                    onTap: (){Navigator.pushNamed(context, '/transfer');},
+                    onTap: (){Navigator.pushNamed(context, '/menuTransfer');},
                     dense: true,
                     leading: Icon(Icons.swap_vert),
                     title: Text('Transfert'),

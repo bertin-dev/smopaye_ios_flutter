@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:collection';
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:smopaye_mobile/services/authService.dart';
 import 'widgets/form/button.dart';
@@ -25,19 +27,50 @@ class _AutoRegisterState extends State<AutoRegister> {
   bool isChecked = true;
   bool _buttonState = true;
   String _genderValue = "masculin";
-  String _statusValue = "utilisateur";
-  String _categoryValue = "petit_commerce";
   String _idNumberValue = "cni";
   String appBarMenuValue;
 
   //web service pour charger les roles
   List<dynamic> _dataRoleAndCategory = List();
-  String myValue;
-  void getRoleAndCategory() async {
+  String myRole;
+  String _categoryValue;
+
+  Map<String, String> allRole;
+  Map allcategorie = new HashMap<String, String>();
+
+  List<_StringWithTag> itemList = new List();
+
+  void getAllCategories() async {
     var listData = await AuthService.roleAndCategory();
     setState(() {
+
+      //allRole.clear();
+      allcategorie.clear();
+
+
       _dataRoleAndCategory = listData;
+      _dataRoleAndCategory.map((item) {
+
+        allRole = {'${item["role"]["id"]}': item["role"]["name"]};
+        allcategorie = {'${item["id"]}': item["name"]};
+
+        allRole.forEach((k, v) {
+
+            itemList.add(_StringWithTag(v, k));
+            print('{ key: $k, value: $v }');
+
+        });
+
+
+
+        /*allRole.entries.forEach((e) {
+          print('{ keyyyyyyyyy: ${e.key}, valueeeeeeee: ${e.value} }');
+        });*/
+
+        print("-------------${item["role"]["name"]}");
+      }).toList();
     });
+
     print("data : $listData");
   }
 
@@ -45,7 +78,7 @@ class _AutoRegisterState extends State<AutoRegister> {
   @override
   void initState() {
     super.initState();
-    getRoleAndCategory();
+    getAllCategories();
   }
 
   @override
@@ -90,7 +123,7 @@ class _AutoRegisterState extends State<AutoRegister> {
             ),
             child: SizedBox(
               height: hv*10,
-              child: SizedBox(child: 
+              child: SizedBox(child:
               Padding(
                 padding: const EdgeInsets.all(30.0),
                 child: Image.asset('assets/images/logo.png', width: wv*15, height: hv*10,),
@@ -98,7 +131,7 @@ class _AutoRegisterState extends State<AutoRegister> {
                width: wv*25,),
               )
           ),*/
-          
+
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Form(
@@ -116,9 +149,9 @@ class _AutoRegisterState extends State<AutoRegister> {
                     keyboardType: TextInputType.text,
                     labelColor: Color(0xff039BE5)
                   ),
-                  
+
                   SizedBox(height: 5.0),
-                  
+
                   // Champ de texte du prénom
 
                   CustomTextField(
@@ -128,7 +161,7 @@ class _AutoRegisterState extends State<AutoRegister> {
                     keyboardType: TextInputType.text,
                     labelColor: Color(0xff039BE5)
                   ),
-                  
+
                   SizedBox(height: 5.0),
 
 
@@ -151,7 +184,7 @@ class _AutoRegisterState extends State<AutoRegister> {
                             setState(() {
                               _idNumberValue = value;
                             });
-                          }, hintText: "Type de pièce", 
+                          }, hintText: "Type de pièce",
                   items: [
                             DropdownMenuItem<String>(
                               child: Text('CNI', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
@@ -178,7 +211,7 @@ class _AutoRegisterState extends State<AutoRegister> {
                   ),
 
                   SizedBox(height: 5.0),
-                  
+
                   // Champ de texte de la CNI
 
                   CustomTextField(
@@ -188,9 +221,9 @@ class _AutoRegisterState extends State<AutoRegister> {
                     keyboardType: TextInputType.text,
                     labelColor: Color(0xff039BE5)
                   ),
-                  
-                  
-                  
+
+
+
                   SizedBox(height: 5.0),
 
 
@@ -200,7 +233,7 @@ class _AutoRegisterState extends State<AutoRegister> {
                             setState(() {
                               _genderValue = value;
                             });
-                          }, hintText: "Votre sexe", 
+                          }, hintText: "Votre sexe",
                   items: [
                             DropdownMenuItem<String>(
                               child: Text('Masculin', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
@@ -217,12 +250,12 @@ class _AutoRegisterState extends State<AutoRegister> {
                   SizedBox(height: 5.0),
 
 
-                  Column(
+                  /*Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       DropdownButton(
                         hint: Text("Select Province"),
-                        value: myValue,
+                        value: myRole,
                         items: _dataRoleAndCategory.map((item) {
                           return DropdownMenuItem(
                             child: Text(item['name']),
@@ -231,22 +264,22 @@ class _AutoRegisterState extends State<AutoRegister> {
                         }).toList(),
                         onChanged: (value) {
                           setState(() {
-                            myValue = value;
+                            myRole = value;
                           });
                         },
                       ),
                       Text(
-                        "Kamu memilih provinsi $myValue",
+                        "Kamu memilih provinsi $myRole",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )
                     ],
-                  ),
+                  ),*/
 
 
-              /*Row(children: <Widget>[
+              Row(children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: SizedBox(child: Text("statut", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5)),), width: wv*22,),
@@ -265,35 +298,75 @@ class _AutoRegisterState extends State<AutoRegister> {
 
                       hint: Padding(
                         padding: const EdgeInsets.only(left: 15.0),
-                        child: Text("Selectionner votre Role"),
+                        child: Text("Utilisateur", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
                       ),
-                      value: myValue,
-                      items: _dataRoleAndCategory.map((item) {
+                      value: myRole,
+                      items:itemList.map((item) {
                         return DropdownMenuItem(
-                          child: Text(item['name']),
-                          value: item['name'],
+                          child: Text(item.string, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
+                          value: (item.tag).toString(),
                         );
-                      }).toList(),
+                      }).toSet().toList(),
                       onChanged: (value) {
                         setState(() {
-                          myValue = value;
+                          myRole = value;
                         });
                       },
                     ),
                   ),
                 ),
               ],
-              ),*/
+              ),
 
                 SizedBox(height: 5.0),
 
-                CustomDropDownField(
+
+                  Row(children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: SizedBox(child: Text("Catégorie", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5)),), width: wv*22,),
+                    ),
+                    Expanded(
+                      child: ButtonTheme(alignedDropdown: true,
+                        child: DropdownButton(
+                          isExpanded: true,
+                          underline: Container(margin: EdgeInsets.only(top: 10.0),
+                            decoration: BoxDecoration(
+                              color: Color(0xff039BE5),
+                            ),
+                            child: SizedBox(height: 2.3,),
+                          ),
+                          icon: Icon(Icons.arrow_drop_down, color: Color(0xff039BE5)),
+
+                          /*hint: Padding(
+                        padding: const EdgeInsets.only(left: 15.0),
+                        child: Text("Selectionner votre Role"),
+                      ),*/
+                          value: _categoryValue,
+                          items: _dataRoleAndCategory.map((item) {
+                            return DropdownMenuItem(
+                              child: Text(item['name'], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
+                              value: item['name'],
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _categoryValue = value;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                  ),
+
+                /*CustomDropDownField(
                   label: "Catégorie",
                    onChangedFunc: (String value) {
                             setState(() {
                               _categoryValue = value;
                             });
-                          }, hintText: "Votre catégorie", 
+                          }, hintText: "Votre catégorie",
                   items: [
                             DropdownMenuItem<String>(
                               child: Text('Petit Commerce', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
@@ -323,10 +396,10 @@ class _AutoRegisterState extends State<AutoRegister> {
                               child: Text('Moto taxi', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5))),
                               value: 'moto_taxi',
                             ),
-                            
+
                           ],
                           value: _categoryValue,
-                  ),
+                  ),*/
                   
 
                   SizedBox(height: hv*6.3),
@@ -417,5 +490,18 @@ class _AutoRegisterState extends State<AutoRegister> {
       return 'Phone number must be 9 characters long';
   }
 
+}
 
+class _StringWithTag {
+   String string;
+   Object tag;
+
+   _StringWithTag(String string, Object tag) {
+    this.string = string;
+    this.tag = tag;
+  }
+
+   String toString() {
+    return string;
+  }
 }

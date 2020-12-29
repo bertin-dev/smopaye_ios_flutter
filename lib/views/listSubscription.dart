@@ -35,13 +35,9 @@ class _ListSubscriptionState extends State<ListSubscription> {
         child: Column(
 
           children: <Widget>[
-            Expanded(
-              child:  ListView(children: <Widget>[
-                SizedBox(height: hv*3,),
-                InstructionCard(text: "Dans cette section, vous avez la liste des abonnements en attente auquels vous avez souscrits."),
-                SizedBox(height: hv*15,),
-              ]),
-            ),
+            SizedBox(height: hv*3,),
+            InstructionCard(text: "Dans cette section, vous avez la liste des abonnements en attente auxquels vous avez souscrits."),
+            SizedBox(height: hv*3,),
             Expanded(
               child: Container(
                 //color: Colors.red,

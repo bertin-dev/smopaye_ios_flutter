@@ -20,10 +20,7 @@ class MenuSubscription extends StatelessWidget {
           actions: <Widget>[
             PopupMenuButton<String>(
               onSelected: (String value) {
-                if (value == "moncompte") {
-                  Navigator.pushNamed(context, '/editAccount');
-                }
-                else if (value == "apropos") {
+                 if (value == "apropos") {
                   Navigator.pushNamed(context, '/about');
                 }
                 else if (value == "tutoriel") {
@@ -39,10 +36,6 @@ class MenuSubscription extends StatelessWidget {
                 PopupMenuItem(
                   value: "tutoriel",
                   child: Text("tutoriel"),
-                ),
-                PopupMenuItem(
-                  value: "moncompte",
-                  child: Text("Mon compte"),
                 ),
               ],
             )

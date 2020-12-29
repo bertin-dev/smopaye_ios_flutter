@@ -1,29 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:smopaye_mobile/views/withrawalAccount.dart';
+import 'package:smopaye_mobile/views/withrawalCard.dart';
 
 import 'widgets/CustomListTile.dart';
 import 'widgets/appBar.dart';
 
 class Withrawal extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: DefaultAppBar(title: "Menu des retraits",),
-      body: Column(
-        children: <Widget>[
-          
-          CustomListTile(
-            title: "Retrait à Smopaye",
-            icon: Icon(Icons.arrow_forward, color: Color(0xff039BE5), size: 30,),
-            onTap: (){Navigator.pushNamed(context, '/withrawSmopaye');},
-          ),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Color(0xff039BE5),
+          actions: <Widget>[
+            PopupMenuButton<String>(
+              onSelected: (String value) {
+                if (value == "apropos") {
+                  Navigator.pushNamed(context, '/about');
+                }
+                else if (value == "tutoriel") {
+                  Navigator.pushNamed(context, '/tutorial');
+                }
 
-          CustomListTile(
-            title: "Retrait par un opérateur",
-            icon: Icon(Icons.arrow_forward, color: Color(0xff039BE5), size: 30,),
-            onTap: (){Navigator.pushNamed(context, '/withrawOperator');},
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: "apropos",
+                  child: Text("A propos"),
+                ),
+                PopupMenuItem(
+                  value: "tutoriel",
+                  child: Text("tutoriel"),
+                ),
+              ],
+            )
+          ],
+          bottom: TabBar(
+            indicatorColor: Colors.white,
+            labelColor: Colors.white,
+            tabs: [
+              Tab(icon: Icon(Icons.account_balance), text: "COMPTE"),
+              Tab(icon: Icon(Icons.credit_card_outlined), text: "CARTES")
+            ],
           ),
-
-        ],
+          title: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Retrait", style: TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.bold), textAlign: TextAlign.left,),
+                Text("E-ZPASS by SMOPAYE", style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w400), textAlign: TextAlign.left,),
+              ]
+          ),
+        ),
+        body: TabBarView(children: [
+            WithrawalAccount(),
+            WithrawalCard(),
+        ]),
       ),
     );
   }

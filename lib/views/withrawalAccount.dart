@@ -8,12 +8,12 @@ import 'widgets/form/button.dart';
 import 'widgets/form/textField.dart';
 import 'widgets/instructionCard.dart';
 
-class WithrawalOperator extends StatefulWidget {
+class WithrawalAccount extends StatefulWidget {
   @override
-  _WithrawalOperatorState createState() => _WithrawalOperatorState();
+  _WithrawalAccountState createState() => _WithrawalAccountState();
 }
 
-class _WithrawalOperatorState extends State<WithrawalOperator> {
+class _WithrawalAccountState extends State<WithrawalAccount> {
   
   final _withrawOperatorFormKey = GlobalKey<FormState>();
   final _amountFormKey = GlobalKey<FormState>();
@@ -27,12 +27,11 @@ class _WithrawalOperatorState extends State<WithrawalOperator> {
   Widget build(BuildContext context) {
     final hv =MediaQuery.of(context).size.height/100;
     return Scaffold(
-      appBar: DefaultAppBar(title: "Faire un Retrait",),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(children: <Widget>[
           SizedBox(height: hv*3,),
-          InstructionCard(text: "Insérez votre numero de compte et poursuivez les étapes",),
+          InstructionCard(text: "Veuillez insérez votre numéro de compte puis suivre les étapes",),
           SizedBox(height: hv*10,),
 
           Form(
@@ -41,11 +40,12 @@ class _WithrawalOperatorState extends State<WithrawalOperator> {
             child: Column(
               children: <Widget>[
                 CustomTextField(
+                  maxLength: 9,
                   hintText: 'Numéro de compte',
                   controller: _accountNumberController,
-                  emptyValidatorText: 'Enter account number',
+                  emptyValidatorText: 'Entre votre numéro de compte',
                   keyboardType: TextInputType.text,
-                  validator: (str) => str.isEmpty ? 'account number Field cannot be empty' : null,
+                  validator: (str) => str.isEmpty ? 'Veuillez inserer votre numéro de compte' : null,
                   labelColor: Color(0xff039BE5)
                 ),
 
@@ -101,7 +101,6 @@ class _WithrawalOperatorState extends State<WithrawalOperator> {
           builder: (BuildContext context) {
             return AlertDialog(
               titlePadding: EdgeInsets.only(top: 15, left: 20),
-              title: Text("Insérer Montant"),
               content: Form(
                 key: _amountFormKey,
                 child: Column(
@@ -110,9 +109,9 @@ class _WithrawalOperatorState extends State<WithrawalOperator> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: CustomTextField(
-                        hintText: 'Montant à payer',
+                        hintText: 'Montant',
                         controller: _amountController,
-                        emptyValidatorText: 'Enter amount',
+                        emptyValidatorText: 'Entrer le montant',
                         keyboardType: TextInputType.number,
                         validator: _amountFieldValidator,
                         labelColor: Color(0xff039BE5)
@@ -123,13 +122,13 @@ class _WithrawalOperatorState extends State<WithrawalOperator> {
               ),
               actions: <Widget>[
                 FlatButton(
-                  child: Text("CANCEL", style: TextStyle(color: Colors.red),),
+                  child: Text("ANNULER", style: TextStyle(color: Colors.red),),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                 ),
                 FlatButton(
-                  child: Text("CONFIRM", style: TextStyle(color: Colors.red),),
+                  child: Text("OK", style: TextStyle(color: Colors.red),),
                   onPressed: () {
                     if (_amountFormKey.currentState.validate()) {
                       Navigator.of(context).pop();

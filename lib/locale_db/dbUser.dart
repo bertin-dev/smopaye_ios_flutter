@@ -76,5 +76,14 @@ class DbUser{
      return path;
    }
 
+   Future<void> initDatabase() async{
+     final path = await getDatabasePath(DB_NAME);
+     db = await openDatabase(path, version: DB_VERSION, onCreate: onCreate);
+     print(db);
+   }
+
+   Future<void> onCreate(Database db, int version) async{
+     await createUtilisateur(db);
+   }
 
 }

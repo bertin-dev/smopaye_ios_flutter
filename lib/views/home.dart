@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
               fit: BoxFit.cover,
             )
           ),
-          child: SizedBox(height: hv*25,
+          child: SizedBox(height: hv*30,
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
               Padding(
@@ -99,20 +99,52 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 35.0, right: 25.0),
-                child: Row(crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("${now.day}", style: TextStyle(fontSize: 90.0, color: Colors.white, fontWeight: FontWeight.bold)),
-                    Column(crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SizedBox(height: 15),
-                        Text("$formattedDay", style: TextStyle(fontSize: 15.0, color: Colors.white, fontWeight: FontWeight.bold)),
-                        Text("$formattedDate ${now.year}", style: TextStyle(fontSize: 13.0, color: Colors.white, fontWeight: FontWeight.bold)),
+              Column(
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(5),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black45.withOpacity(0.1),
+                            offset: new Offset(1.0, 1.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 5.0)
                       ],
                     ),
-                  ],
-                ),
+                    margin: EdgeInsets.only(top: 25.0, left: 5, right: 5),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Column(
+                            children: <Widget>[
+                              Text("Points Cumulés: 0", textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white)),
+                              Text("Bonus: 0",textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white))
+                            ],
+                          ),
+                        ),
+                      ],),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0, right: 25.0),
+                    child: Row(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("${now.day}", style: TextStyle(fontSize: 90.0, color: Colors.white, fontWeight: FontWeight.bold)),
+                        Column(crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(height: 15),
+                            Text("$formattedDay", style: TextStyle(fontSize: 15.0, color: Colors.white, fontWeight: FontWeight.bold)),
+                            Text("$formattedDate ${now.year}", style: TextStyle(fontSize: 13.0, color: Colors.white, fontWeight: FontWeight.bold)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               )
             ],),
           )

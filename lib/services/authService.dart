@@ -5,12 +5,14 @@ import 'dart:ffi';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:smopaye_mobile/models/abonnement.dart';
+import 'package:smopaye_mobile/models/allMyHomeResponse.dart';
 import 'package:smopaye_mobile/models/compte.dart';
 import 'package:smopaye_mobile/models/dataAllUserCard.dart';
 import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smopaye_mobile/models/dataUserCard.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
 import 'package:smopaye_mobile/models/listAllUserCardResponse.dart';
 import 'package:smopaye_mobile/utils/endpoints.dart';
 
@@ -197,6 +199,39 @@ class AuthService {
     }
     return dataAllUserCard;
   }
+
+  /* Transfert(Compte à Compte)*/
+  static dynamic transaction_compte_A_Compte({@required double amount, @required String account_number_receiver, @required String account_number_sender, @required String transaction_type}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.account_transfer;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.post(myUrl,
+        headers: headers,
+        body: {
+          "amount" : "$amount",
+          "account_number_receiver" : "$account_number_receiver",
+          "account_number_sender" : "$account_number_sender",
+          "transaction_type" : "$transaction_type"
+        });
+    return response;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -425,30 +460,6 @@ class AuthService {
         });
     return response;
   }
-
-
-  /* Transfert(Compte à Compte)*/
-  static dynamic transaction_compte_A_Compte({ @required Float amount, @required String account_number_receiver, @required String account_number_sender, @required String transaction_type }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/card/transaction/payment";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.post(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        },
-        body: {
-          "amount" : "$amount",
-          "account_number_receiver" : "$account_number_receiver",
-          "account_number_sender" : "$account_number_sender",
-          "transaction_type" : "$transaction_type"
-        });
-    return response;
-  }
-
 
   /* Debit */
   static dynamic debit({ @required Float amount, @required String code_number_sender, @required String code_number_receiver, @required String transaction_type, @required String serial_number_device }) async {

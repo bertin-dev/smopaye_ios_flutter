@@ -23,7 +23,7 @@ class _CustomDropDownFieldState extends State<CustomDropDownField> {
     return Row(children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: SizedBox(child: Text(widget.label, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5)),), width: wv*22,),
+                child: SizedBox(child: Text(widget.label, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Color(0xff039BE5)),), width: wv*30,),
               ),
               Expanded(
                 child: ButtonTheme(alignedDropdown: true,

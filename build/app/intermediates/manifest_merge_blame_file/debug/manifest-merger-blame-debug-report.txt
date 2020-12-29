@@ -38,45 +38,45 @@
 23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 24
 25    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
-25-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:5-65
-25-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:22-62
+25-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:22:5-65
+25-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:22:22-62
 26    <uses-feature
-26-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:25:5-27:36
+26-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:25:5-27:36
 27        android:name="android.hardware.camera"
-27-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:26:9-47
+27-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:26:9-47
 28        android:required="false" />
-28-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:27:9-33
+28-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:27:9-33
 29    <uses-feature
-29-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:28:5-30:36
+29-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:28:5-30:36
 30        android:name="android.hardware.camera.front"
-30-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:29:9-53
+30-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:29:9-53
 31        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
-31-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:30:9-33
+31-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:30:9-33
 32    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
 33    <uses-feature
-33-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:33:5-35:36
+33-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:33:5-35:36
 34        android:name="android.hardware.camera.autofocus"
-34-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:34:9-57
+34-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:34:9-57
 35        android:required="false" />
-35-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:35:9-33
+35-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:35:9-33
 36    <uses-feature
-36-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:36:5-38:36
+36-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:36:5-38:36
 37        android:name="android.hardware.camera.flash"
-37-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:37:9-53
+37-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:37:9-53
 38        android:required="false" />
-38-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:38:9-33
+38-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:38:9-33
 39    <uses-feature
-39-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:39:5-41:36
+39-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:39:5-41:36
 40        android:name="android.hardware.screen.landscape"
-40-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:40:9-57
+40-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:40:9-57
 41        android:required="false" />
-41-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:41:9-33
+41-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:41:9-33
 42    <uses-feature
-42-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:42:5-44:36
+42-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:42:5-44:36
 43        android:name="android.hardware.wifi"
-43-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:43:9-45
+43-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:43:9-45
 44        android:required="false" />
-44-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:44:9-33
+44-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:44:9-33
 45    <!--
 46 io.flutter.app.FlutterApplication is an android.app.Application that
 47         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -165,26 +165,26 @@
 96-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
 97
 98        <meta-data
-98-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+98-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 99            android:name="com.google.android.gms.version"
-99-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+99-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
 100            android:value="@integer/google_play_services_version" />
-100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 101
 102        <activity
-102-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:47:9-53:63
+102-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:47:9-53:63
 103            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-103-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:48:13-74
+103-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:48:13-74
 104            android:clearTaskOnLaunch="true"
-104-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:49:13-45
+104-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:49:13-45
 105            android:screenOrientation="sensorLandscape"
-105-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:50:13-56
+105-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:50:13-56
 106            android:stateNotNeeded="true"
-106-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:51:13-42
+106-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:51:13-42
 107            android:theme="@style/zxing_CaptureTheme"
-107-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:52:13-54
+107-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:52:13-54
 108            android:windowSoftInputMode="stateAlwaysHidden" />
-108-->[com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:53:13-60
+108-->[com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:53:13-60
 109    </application>
 110
 111</manifest>

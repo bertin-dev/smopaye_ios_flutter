@@ -8,16 +8,17 @@ import 'widgets/form/button.dart';
 import 'widgets/form/textField.dart';
 import 'widgets/instructionCard.dart';
 
-class WithrawalSmopaye extends StatefulWidget {
+class WithrawalCard extends StatefulWidget {
   @override
-  _WithrawalSmopayeState createState() => _WithrawalSmopayeState();
+  _WithrawalCardState createState() => _WithrawalCardState();
 }
 
-class _WithrawalSmopayeState extends State<WithrawalSmopaye> {
+class _WithrawalCardState extends State<WithrawalCard> {
   
   final _withrawSmopayeFormKey = GlobalKey<FormState>();
   TextEditingController _accountNumberController = new TextEditingController();
   TextEditingController _amountController = new TextEditingController();
+  final _amountFormKey = GlobalKey<FormState>();
 
   bool _buttonState = true;
   bool _autovalidate = false;
@@ -27,12 +28,11 @@ class _WithrawalSmopayeState extends State<WithrawalSmopaye> {
   Widget build(BuildContext context) {
     final hv =MediaQuery.of(context).size.height/100;
     return Scaffold(
-      appBar: DefaultAppBar(title: "Retrait Smopaye",),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: ListView(children: <Widget>[
           SizedBox(height: hv*3,),
-          InstructionCard(text: "Insérez votre numero de compte et poursuivez les étapes",),
+          InstructionCard(text: "Veuillez insérer votre numéro de carte puis suivre les étapes",),
           SizedBox(height: hv*10,),
 
           Form(
@@ -41,22 +41,12 @@ class _WithrawalSmopayeState extends State<WithrawalSmopaye> {
             child: Column(
               children: <Widget>[
                 CustomTextField(
-                  hintText: 'Numéro de compte',
+                  maxLength: 8,
+                  hintText: 'Numéro de carte',
                   controller: _accountNumberController,
-                  emptyValidatorText: 'Enter account number',
+                  emptyValidatorText: 'Entrer votre numéro de carte',
                   keyboardType: TextInputType.text,
-                  validator: (str) => str.isEmpty ? 'account number Field cannot be empty' : null,
-                  labelColor: Color(0xff039BE5)
-                ),
-
-                SizedBox(height: hv*3,),
-
-                CustomTextField(
-                  hintText: 'Montant à payer',
-                  controller: _amountController,
-                  emptyValidatorText: 'Enter amount',
-                  keyboardType: TextInputType.number,
-                  validator: _amountFieldValidator,
+                  validator: (str) => str.isEmpty ? 'Veuillez inserer votre numéro de carte' : null,
                   labelColor: Color(0xff039BE5)
                 ),
 
@@ -104,18 +94,48 @@ class _WithrawalSmopayeState extends State<WithrawalSmopaye> {
          _buttonState = true;
         });
         showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            // return object of type Dialog
-            return 
-            DefaultAlertDialog(
-              title: "Information",
-              message: "Numéro de compte FBBCDBD pas enregistré ou non utilisé",
-              icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
-            );
-            
-          },
-        );
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                titlePadding: EdgeInsets.only(top: 15, left: 20),
+                content: Form(
+                  key: _amountFormKey,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: CustomTextField(
+                            hintText: 'Montant',
+                            controller: _amountController,
+                            emptyValidatorText: 'Entrer le montant',
+                            keyboardType: TextInputType.number,
+                            validator: _amountFieldValidator,
+                            labelColor: Color(0xff039BE5)
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                actions: <Widget>[
+                  FlatButton(
+                    child: Text("ANNULER", style: TextStyle(color: Colors.red),),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  FlatButton(
+                    child: Text("OK", style: TextStyle(color: Colors.red),),
+                    onPressed: () {
+                      if (_amountFormKey.currentState.validate()) {
+                        Navigator.of(context).pop();
+                        _check();
+                      }
+                    },
+                  ),
+                ],
+              );
+            });
         }
       );
       setState(() {
@@ -140,6 +160,22 @@ class _WithrawalSmopayeState extends State<WithrawalSmopaye> {
       }
       // The pattern of the amount didn't match the regex above.
       return 'Enter a valid amount';
+  }
+
+  _check () {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "Le Solde de votre compte ${_accountNumberController.text} est insuffisant",
+            icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
+          );
+
+      },
+    );
   }
 
 }

@@ -10,31 +10,31 @@ MERGED from [:sqflite] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau
 MERGED from [:google_maps_flutter] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\google_maps_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-10:12
 MERGED from [:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [:webview_flutter] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\webview_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-10:12
 MERGED from [:shared_preferences] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b9ec821d09bd45c0f643d5060fe691dc\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\bbf23d6a99f29413cd333854225d4226\play-services-location-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\ecad22ba48b961719b8a931625c008b3\play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef45aeaef106dd6886f60a43625f595\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
-MERGED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:17:1-56:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\e9dab3d8205e1ec800bc884813c50883\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\7add93472594dc9a1bddb295417001d6\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b6bc39acb6e5a3e0eaba78e9fe19e789\webkit-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2c69aec9eae6a1715774e5f640619006\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9c73378cd76aa1026da617f5e24ab57e\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\d55a9683b415c5ebfc4969f297916237\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\f1302f19b9d61e5133fb762474332d17\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\e13e899f330e6df3ac64643e454e5859\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9aa0c5ca83ca99efd1ffe7128d8d263c\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2eb0c5d70b2275f899f8c157f03759fa\vectordrawable-1.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\74bafb2c39538d8a8b44daf5fbf4fa7e\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\531da913e8f77e3917fb1bf076ba84ba\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\753f4a1c5cf5f6f4988da66770e1f4c9\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\faaebcfe560b4b038d05ce6a271fd41a\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef9327b303b04eb8f30d5bd5cf56941\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\3a9cef063602b8707a59ff6b33147db4\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\3c2cd142d7ecd425ee3c092761fc14c7\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:17:1-26:12
@@ -44,12 +44,13 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Bertin-dev\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\efb7249105b624ec7486ec14e970374e\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\97666504611c11324bb4ea621d8cf8d2\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\6d23e8b42f999cc89aedf50fbd5f53b2\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\659dda2d8c3d199079ebaa07033bce07\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\fce925daa8187a6d3b40dd7ea388a100\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b8f14d53149071f51969fb4193bd335b\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\483be17b33795151957d5967b1dc3d3d\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b5e6060c6facf2c013c89f74994c66d4\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:17:1-56:12
 INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -93,14 +94,14 @@ MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\ecad22ba48b961719b8a931625c008b3\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef45aeaef106dd6886f60a43625f595\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef45aeaef106dd6886f60a43625f595\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:46:5-54:19
-MERGED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:46:5-54:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\6d23e8b42f999cc89aedf50fbd5f53b2\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\6d23e8b42f999cc89aedf50fbd5f53b2\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:46:5-54:19
+MERGED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:46:5-54:19
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
@@ -159,8 +160,8 @@ MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Bertin-dev\AndroidStudi
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\geolocator\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-8:67
+MERGED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:6:5-8:67
 MERGED from [:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\webview_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -169,6 +170,8 @@ MERGED from [:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\No
 MERGED from [:connectivity] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\connectivity\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b9ec821d09bd45c0f643d5060fe691dc\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b9ec821d09bd45c0f643d5060fe691dc\appcompat-1.0.2\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\292ca951728d8d568eaf139972b71c66\play-services-maps-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\bbf23d6a99f29413cd333854225d4226\play-services-location-17.0.0\AndroidManifest.xml:5:5-44
@@ -179,16 +182,14 @@ MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\ecad22ba48b961719b8a931625c008b3\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef45aeaef106dd6886f60a43625f595\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef45aeaef106dd6886f60a43625f595\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:20:5-44
-MERGED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\e9dab3d8205e1ec800bc884813c50883\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\e9dab3d8205e1ec800bc884813c50883\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\7add93472594dc9a1bddb295417001d6\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\7add93472594dc9a1bddb295417001d6\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b6bc39acb6e5a3e0eaba78e9fe19e789\webkit-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b6bc39acb6e5a3e0eaba78e9fe19e789\webkit-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2c69aec9eae6a1715774e5f640619006\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2c69aec9eae6a1715774e5f640619006\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9c73378cd76aa1026da617f5e24ab57e\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9c73378cd76aa1026da617f5e24ab57e\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\d55a9683b415c5ebfc4969f297916237\viewpager-1.0.0\AndroidManifest.xml:20:5-44
@@ -199,6 +200,8 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\Bertin-dev\.gradle\caches\tr
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\e13e899f330e6df3ac64643e454e5859\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9aa0c5ca83ca99efd1ffe7128d8d263c\activity-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9aa0c5ca83ca99efd1ffe7128d8d263c\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2eb0c5d70b2275f899f8c157f03759fa\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\2eb0c5d70b2275f899f8c157f03759fa\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\74bafb2c39538d8a8b44daf5fbf4fa7e\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\74bafb2c39538d8a8b44daf5fbf4fa7e\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\531da913e8f77e3917fb1bf076ba84ba\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
@@ -207,8 +210,6 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Bertin
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\753f4a1c5cf5f6f4988da66770e1f4c9\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\faaebcfe560b4b038d05ce6a271fd41a\customview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\faaebcfe560b4b038d05ce6a271fd41a\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef9327b303b04eb8f30d5bd5cf56941\media-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\0ef9327b303b04eb8f30d5bd5cf56941\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\3a9cef063602b8707a59ff6b33147db4\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\3a9cef063602b8707a59ff6b33147db4\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\3c2cd142d7ecd425ee3c092761fc14c7\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
@@ -227,6 +228,8 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Bertin-dev\.gradle\
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\97666504611c11324bb4ea621d8cf8d2\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\6d23e8b42f999cc89aedf50fbd5f53b2\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\6d23e8b42f999cc89aedf50fbd5f53b2\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\659dda2d8c3d199079ebaa07033bce07\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\659dda2d8c3d199079ebaa07033bce07\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\fce925daa8187a6d3b40dd7ea388a100\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -237,10 +240,12 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Bertin-dev\.gradle\caches\tran
 MERGED from [androidx.print:print:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\483be17b33795151957d5967b1dc3d3d\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b5e6060c6facf2c013c89f74994c66d4\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\b5e6060c6facf2c013c89f74994c66d4\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\12b7d12d419770281ec5960c133ffa6d\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [:qr_code_scanner] C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\build\qr_code_scanner\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-64
 	android:targetSdkVersion
 		INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Bertin-dev\AndroidStudioProjects\FLUTTER\Nouveau dossier\smopaye_ios_flutter\android\app\src\debug\AndroidManifest.xml
@@ -292,62 +297,62 @@ ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-de
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\9542488944b39b26f4e5db00afdd4571\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\747be572989b6b72f3ec39156fe3e689\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\603b9728468ad1b50f222bea14455be3\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
 uses-permission#android.permission.CAMERA
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:5-65
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:22:5-65
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:22:22-62
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:22:22-62
 uses-feature#android.hardware.camera
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:25:5-27:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:25:5-27:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:27:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:27:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:26:9-47
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:26:9-47
 uses-feature#android.hardware.camera.front
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:28:5-30:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:28:5-30:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:30:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:30:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:29:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:29:9-53
 uses-feature#android.hardware.camera.autofocus
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:33:5-35:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:33:5-35:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:35:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:35:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:34:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:34:9-57
 uses-feature#android.hardware.camera.flash
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:36:5-38:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:36:5-38:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:38:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:38:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:37:9-53
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:37:9-53
 uses-feature#android.hardware.screen.landscape
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:39:5-41:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:39:5-41:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:41:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:41:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:40:9-57
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:40:9-57
 uses-feature#android.hardware.wifi
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:42:5-44:36
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:42:5-44:36
 	android:required
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:44:9-33
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:44:9-33
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:43:9-45
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:43:9-45
 activity#com.journeyapps.barcodescanner.CaptureActivity
-ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:47:9-53:63
+ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:47:9-53:63
 	android:screenOrientation
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:50:13-56
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:50:13-56
 	android:clearTaskOnLaunch
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:49:13-45
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:49:13-45
 	android:stateNotNeeded
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:51:13-42
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:51:13-42
 	android:windowSoftInputMode
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:53:13-60
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:53:13-60
 	android:theme
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:52:13-54
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:52:13-54
 	android:name
-		ADDED from [com.journeyapps:zxing-android-embedded:4.0.2] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\8d19b8d9e4671627fa2c50e568fa85d1\zxing-android-embedded-4.0.2\AndroidManifest.xml:48:13-74
+		ADDED from [com.journeyapps:zxing-android-embedded:4.1.0] C:\Users\Bertin-dev\.gradle\caches\transforms-2\files-2.1\c5b6df3428015f2da5a0b357f3682b15\zxing-android-embedded-4.1.0\AndroidManifest.xml:48:13-74

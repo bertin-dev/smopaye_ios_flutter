@@ -2,6 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/models/homeResponse.dart';
 import 'package:smopaye_mobile/services/authService.dart';
 import 'package:smopaye_mobile/views/widgets/alertDialogs/defaultDialog.dart';
 
@@ -26,9 +29,7 @@ class _PayInvoiceState extends State<PayInvoice> {
   bool _autovalidate = false;
 
   //Sender
-  final String _typeTransaction = "FACTURE";
-  final String _codeNumberSender = "";
-
+  final String _typeTransaction = "PAYEMENT_FACTURE";
 
   @override
   Widget build(BuildContext context) {
@@ -95,8 +96,8 @@ class _PayInvoiceState extends State<PayInvoice> {
  // Fonction de paiement des factures
 
   _payerFacture (BuildContext context) async {
-
-    print("accountnber: ${_accountNumberController.text}\namount: ${_amountController.text}\n");
+    final getCodeNumberSender = await SharedPreferences.getInstance();
+    print("accountNberReceiver: ${_accountNumberController.text}\namount: ${_amountController.text}\n _codeNumberSender: ${getCodeNumberSender.get("key_myCompteUser")}\n");
       setState(() {
        _autovalidate = true; 
       });
@@ -109,17 +110,32 @@ class _PayInvoiceState extends State<PayInvoice> {
         //connexion au web service
         dynamic response = await AuthService.transaction(
             amount: double.parse(_amountController.text),
-            code_number_sender: _codeNumberSender,
+            code_number_sender: getCodeNumberSender.get("key_myCompteUser"),
             code_number_receiver: _accountNumberController.text,
             transaction_type: _typeTransaction);
 
-        print(response.body);
+        Map<String, dynamic> body = jsonDecode(response.body);
 
-        setState(() {
-          _buttonState = true;
-        });
+        if(response.statusCode == 200) {
+          setState(() {
+            _buttonState = true;
+          });
+          HomeResponse homeResponse = HomeResponse.fromJson(body);
+          String idReceiver = homeResponse.message.card_receiver.code_number;
+          String msgReceiver = homeResponse.message.card_receiver.notif;
+          String idSender = homeResponse.message.card_sender.code_number;
+          String msgSender = homeResponse.message.card_sender.notif;
+          _successResponse(idReceiver, msgReceiver, idSender, msgSender);
+        } else{
+          setState(() {
+            _buttonState = true;
+          });
+          ErrorBody errorBody = ErrorBody.fromJson(body);
+          _errorResponse(errorBody.message);
+        }
 
-        if (response.statusCode == 200) {
+
+       /* if (response.statusCode == 200) {
 
           //Navigator.pop(context);
           response = json.decode(response.body);
@@ -140,7 +156,7 @@ class _PayInvoiceState extends State<PayInvoice> {
           response = json.decode(response.body);
           print(response["data"]["error"]);
           _error_showDialog(response["data"]["error"]);
-        }
+        }*/
 
 
         }
@@ -248,5 +264,36 @@ class _PayInvoiceState extends State<PayInvoice> {
     );
   }
 
+  _successResponse (String id_cardReceiver, String msgReceiver, String id_cardSender, String msgSender) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$msgSender",
+            icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
+          );
+
+      },
+    );
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
+            icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
+          );
+
+      },
+    );
+  }
 
   }

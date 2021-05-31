@@ -55,6 +55,8 @@ dependencies:
   google_maps_flutter: ^1.0.5
   geolocator: ^6.1.4
   badges: ^1.1.0
+  progress_dialog: ^1.2.4
+  toast: ^0.1.5
 
 
 

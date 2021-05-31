@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-iw\\values-iw.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\5076922fa442eb1813d42994fa4afd22\\jetified-play-services-basement-17.0.0\\res\\values-iw\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "176",
+                        "endOffsets": "423"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3874",
+                        "endColumns": "176",
+                        "endOffsets": "4046"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\b9ec821d09bd45c0f643d5060fe691dc\\appcompat-1.0.2\\res\\values-iw\\values-iw.xml",
                     "from": {
@@ -52,23 +69,6 @@
                         "startOffsets": "2751,2856,3042,3169,3275,3473,3600,3742,4051,4246,4351,4527,4652,4845,5020,5110,5200",
                         "endColumns": "104,185,126,105,197,126,141,131,194,104,175,124,192,174,89,89,109",
                         "endOffsets": "2851,3037,3164,3270,3468,3595,3737,3869,4241,4346,4522,4647,4840,5015,5105,5195,5305"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\603b9728468ad1b50f222bea14455be3\\jetified-play-services-basement-17.0.0\\res\\values-iw\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "176",
-                        "endOffsets": "423"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3874",
-                        "endColumns": "176",
-                        "endOffsets": "4046"
                     }
                 },
                 {

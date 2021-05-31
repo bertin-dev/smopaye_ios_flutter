@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\url_launcher\\intermediates\\res\\merged\\debug\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\smopaye_ios_flutter\\build\\url_launcher\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\615cbc3b009c6ace60b4a000b7c5707b\\core-1.1.0\\res\\values-v21\\values-v21.xml",
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\url_launcher\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\smopaye_ios_flutter\\build\\url_launcher\\intermediates\\res\\merged\\debug\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\615cbc3b009c6ace60b4a000b7c5707b\\core-1.1.0\\res\\values-v21\\values-v21.xml",

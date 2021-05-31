@@ -47,15 +47,15 @@ class QrCode extends StatelessWidget {
                 indicatorColor: Colors.white,
                 labelColor: Colors.white,
                 tabs: [
+                  Tab(text: "MON CODE"),
                   Tab(text: "SCANNER"),
-                  Tab(text: "MON CODE")
                 ],
               ),
               title: Text('Accueil QR Code'),
             ),
             body: TabBarView(children: [
-              QRScan(),
               QRPay(),
+              QRScan(),
             ]),
           ),
         );

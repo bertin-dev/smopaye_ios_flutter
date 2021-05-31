@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\Nouveau dossier\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "C:\\Users\\Bertin-dev\\AndroidStudioProjects\\FLUTTER\\smopaye_ios_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\5076922fa442eb1813d42994fa4afd22\\jetified-play-services-basement-17.0.0\\res\\values-mr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "201",
+                        "endOffsets": "448"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3945",
+                        "endColumns": "201",
+                        "endOffsets": "4142"
+                    }
+                },
                 {
                     "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\615cbc3b009c6ace60b4a000b7c5707b\\core-1.1.0\\res\\values-mr\\values-mr.xml",
                     "from": {
@@ -52,23 +69,6 @@
                         "startOffsets": "2807,2916,3115,3240,3354,3558,3681,3819,4147,4356,4466,4651,4777,4975,5158,5248,5344",
                         "endColumns": "108,198,124,113,203,122,137,125,208,109,184,125,197,182,89,95,109",
                         "endOffsets": "2911,3110,3235,3349,3553,3676,3814,3940,4351,4461,4646,4772,4970,5153,5243,5339,5449"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Bertin-dev\\.gradle\\caches\\transforms-2\\files-2.1\\603b9728468ad1b50f222bea14455be3\\jetified-play-services-basement-17.0.0\\res\\values-mr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "201",
-                        "endOffsets": "448"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3945",
-                        "endColumns": "201",
-                        "endOffsets": "4142"
                     }
                 }
             ]

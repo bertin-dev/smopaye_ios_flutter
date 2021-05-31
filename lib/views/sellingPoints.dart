@@ -32,7 +32,7 @@ class _SellingPointsState extends  State<SellingPoints> {
   String myConvert(double latitudeCurrent, double longitudeCurrent, double lat, double lng){
     double resultat = calculateDistance(latitudeCurrent, longitudeCurrent, lat, lng);
     if(resultat < 1){
-      return "${resultat.toStringAsFixed(2)} m";
+      return "${(resultat*1000).toStringAsFixed(2)} m";
     } else{
       return "${resultat.toStringAsFixed(2)} Km";
     }

@@ -1,12 +1,17 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/services/authService.dart';
 
 import 'widgets/alertDialogs/defaultDialog.dart';
 import 'widgets/appBar.dart';
 import 'widgets/form/button.dart';
 import 'widgets/form/textField.dart';
 import 'widgets/instructionCard.dart';
+import 'package:smopaye_mobile/models/homeRetraitAccount.dart';
 
 class WithrawalAccount extends StatefulWidget {
   @override
@@ -132,7 +137,7 @@ class _WithrawalAccountState extends State<WithrawalAccount> {
                   onPressed: () {
                     if (_amountFormKey.currentState.validate()) {
                       Navigator.of(context).pop();
-                            _check();
+                      RetraitAccepteurInSmopayeServer();
                     }
                   },
                 ),
@@ -164,22 +169,61 @@ class _WithrawalAccountState extends State<WithrawalAccount> {
       // The pattern of the amount didn't match the regex above.
       return 'Enter a valid amount';
   }
-  
 
-  _check () {
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          // return object of type Dialog
-          return 
+  //Retrait (Compte à Compte) chez operateur
+  RetraitAccepteurInSmopayeServer () async {
+    final getPhoneNumber = await SharedPreferences.getInstance();
+    print("accountnber: ${_accountNumberController.text}\namount: ${_amountController.text}\n");
+
+      dynamic response = await AuthService.retraitCompteOperator(
+          account_number: _accountNumberController.text,
+          withDrawalAmount: double.parse(_amountController.text),
+          phoneNumber: getPhoneNumber.get("key_myPhoneUser"));
+
+      Map<String, dynamic> body = jsonDecode(response.body);
+
+      if(response.statusCode == 200) {
+        HomeRetraitAccount homeRetraitAccount = HomeRetraitAccount.fromJson(body);
+        String msg = homeRetraitAccount.message.sender.notif;
+        _successResponse("", msg);
+      } else{
+
+        ErrorBody errorBody = ErrorBody.fromJson(body);
+        _errorResponse(errorBody.message);
+      }
+  }
+
+
+  _successResponse (String id_card, String msg) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
           DefaultAlertDialog(
             title: "Information",
-            message: "Le Solde de votre compte ${_accountNumberController.text} est insuffisant",
+            message: "$msg",
+            icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
+          );
+
+      },
+    );
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
             icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
           );
-          
-        },
-      );
+
+      },
+    );
   }
 
 }

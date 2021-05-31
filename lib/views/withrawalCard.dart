@@ -1,13 +1,17 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/services/authService.dart';
 
 import 'widgets/alertDialogs/defaultDialog.dart';
 import 'widgets/appBar.dart';
 import 'widgets/form/button.dart';
 import 'widgets/form/textField.dart';
 import 'widgets/instructionCard.dart';
-
+import 'package:smopaye_mobile/models/homeRetrait.dart';
 class WithrawalCard extends StatefulWidget {
   @override
   _WithrawalCardState createState() => _WithrawalCardState();
@@ -16,7 +20,7 @@ class WithrawalCard extends StatefulWidget {
 class _WithrawalCardState extends State<WithrawalCard> {
   
   final _withrawSmopayeFormKey = GlobalKey<FormState>();
-  TextEditingController _accountNumberController = new TextEditingController();
+  TextEditingController _cardNumberController = new TextEditingController();
   TextEditingController _amountController = new TextEditingController();
   final _amountFormKey = GlobalKey<FormState>();
 
@@ -43,7 +47,7 @@ class _WithrawalCardState extends State<WithrawalCard> {
                 CustomTextField(
                   maxLength: 8,
                   hintText: 'Numéro de carte',
-                  controller: _accountNumberController,
+                  controller: _cardNumberController,
                   emptyValidatorText: 'Entrer votre numéro de carte',
                   keyboardType: TextInputType.text,
                   validator: (str) => str.isEmpty ? 'Veuillez inserer votre numéro de carte' : null,
@@ -78,7 +82,7 @@ class _WithrawalCardState extends State<WithrawalCard> {
  
   _withraw (BuildContext context) async {
 
-    print("accountnber: ${_accountNumberController.text}\namount: ${_amountController.text}\n");
+    print("accountnber: ${_cardNumberController.text}\namount: ${_amountController.text}\n");
       setState(() {
        _autovalidate = true; 
       });
@@ -129,7 +133,7 @@ class _WithrawalCardState extends State<WithrawalCard> {
                     onPressed: () {
                       if (_amountFormKey.currentState.validate()) {
                         Navigator.of(context).pop();
-                        _check();
+                        RetraitAccepteurInSmopayeServer();
                       }
                     },
                   ),
@@ -162,7 +166,32 @@ class _WithrawalCardState extends State<WithrawalCard> {
       return 'Enter a valid amount';
   }
 
-  _check () {
+
+
+  //Retrait (Carte à Carte) chez operateur
+  RetraitAccepteurInSmopayeServer () async {
+    final getPhoneNumber = await SharedPreferences.getInstance();
+    print("accountnber: ${_cardNumberController.text}\namount: ${_amountController.text}\n");
+
+    dynamic response = await AuthService.retrait_accepteur(
+        withDrawalAmount: double.parse(_amountController.text),
+        phoneNumber: getPhoneNumber.get("key_myPhoneUser"),
+        card_id: _cardNumberController.text);
+
+    Map<String, dynamic> body = jsonDecode(response.body);
+
+    if(response.statusCode == 200) {
+      HomeRetrait homeRetrait = HomeRetrait.fromJson(body);
+      String msg = homeRetrait.message.sender.notif;
+      _successResponse(_cardNumberController.text, msg);
+    } else{
+      ErrorBody errorBody = ErrorBody.fromJson(body);
+      _errorResponse(errorBody.message);
+    }
+  }
+
+
+  _successResponse (String id_card, String msg) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -170,7 +199,23 @@ class _WithrawalCardState extends State<WithrawalCard> {
         return
           DefaultAlertDialog(
             title: "Information",
-            message: "Le Solde de votre compte ${_accountNumberController.text} est insuffisant",
+            message: "$msg",
+            icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
+          );
+
+      },
+    );
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
             icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
           );
 

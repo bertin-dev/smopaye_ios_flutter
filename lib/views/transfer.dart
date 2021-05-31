@@ -3,8 +3,10 @@ import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smopaye_mobile/models/allMyHomeResponse.dart';
 import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/models/homeResponse.dart';
 import 'package:smopaye_mobile/services/authService.dart';
 import 'package:smopaye_mobile/views/widgets/alertDialogs/defaultDialog.dart';
 import 'package:smopaye_mobile/views/widgets/appBar.dart';
@@ -133,21 +135,20 @@ class _TransferState extends State<Transfer> {
 
  // Fonction de transfert carte
   _transferCard (BuildContext context) async {
-
+    final getIDCardSender = await SharedPreferences.getInstance();
     print("cardNumber: ${_cardNumberController.text}\namount: ${_amountController.text}\ntype_transfert: ${_operation}");
       setState(() {
        _autovalidate = true;
       });
 
       if (_transferFormKey.currentState.validate()) {
-
         //transfertCompteACompteInSmopayeServer(double.parse(_amountController.text), _accountNumberController.text, "", _operation);
 
         setState(() {
         _buttonState = false;
         });
         
-      Timer(Duration(seconds: 3),
+      /*Timer(Duration(seconds: 3),
       (){
         setState(() {
          _buttonState = true;
@@ -156,7 +157,35 @@ class _TransferState extends State<Transfer> {
       );
       setState(() {
          _buttonState = false;
-        });
+        });*/
+
+
+        dynamic response = await AuthService.transaction_carte_A_Carte(
+            amount: double.parse(_amountController.text),
+            id_card_sender: getIDCardSender.get("key_myIdCardUser"),
+            id_card_receiver: _cardNumberController.text,
+            typeTransaction: _operation);
+
+        Map<String, dynamic> body = jsonDecode(response.body);
+
+        if(response.statusCode == 200) {
+          setState(() {
+            _buttonState = true;
+          });
+          HomeResponse homeResponse = HomeResponse.fromJson(body);
+          String idCardReceiver = homeResponse.message.card_receiver.code_number;
+          String msgReceiver = homeResponse.message.card_receiver.notif;
+          String idCardSender = homeResponse.message.card_sender.code_number;
+          String msgSender = homeResponse.message.card_sender.notif;
+          _successResponse(idCardReceiver, msgReceiver, idCardSender, msgSender);
+        } else{
+          setState(() {
+            _buttonState = true;
+          });
+          ErrorBody errorBody = ErrorBody.fromJson(body);
+          _errorResponse(errorBody.message);
+        }
+
 
       setState(() {
        _autovalidate = true; 
@@ -166,7 +195,7 @@ class _TransferState extends State<Transfer> {
 
   // Fonction de transfert compte
   _transferAccount (BuildContext context) async {
-
+    final getAccountNumberSender = await SharedPreferences.getInstance();
     print("accountnber: ${_accountNumberController.text}\namount: ${_amountController.text}\ntype_transfert: ${_operation}");
     setState(() {
       _autovalidate = true;
@@ -192,7 +221,7 @@ class _TransferState extends State<Transfer> {
       dynamic response = await AuthService.transaction_compte_A_Compte(
           amount: double.parse(_amountController.text),
           account_number_receiver: _accountNumberController.text,
-          account_number_sender: "355192758",
+          account_number_sender: getAccountNumberSender.get("key_myPersonalAccountNumberUser"),
           transaction_type: _operation);
 
       Map<String, dynamic> body = jsonDecode(response.body);

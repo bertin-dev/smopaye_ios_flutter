@@ -9,7 +9,6 @@ import 'package:smopaye_mobile/utils/api_util.dart';
 
 class AuthService2{
 
-
     Future<List<Particulier>> fetchAllProfilUser() async{
     String url = ApiUtil.MAIN_API_URL + ApiUtil.PARAMS_USER + "694048925";
     final prefs = await SharedPreferences.getInstance();

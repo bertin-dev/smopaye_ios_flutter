@@ -3,7 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smopaye_mobile/services/authService.dart';
+import 'package:smopaye_mobile/services/prefManager.dart';
 import 'package:smopaye_mobile/services/secureStorage.dart';
 import 'widgets/alertDialogs/forgotPasswordDialog.dart';
 import 'widgets/form/button.dart';
@@ -56,9 +58,11 @@ class _LoginState extends State<Login> {
   bool _button2State = true;
   String _language = 'default';
 
+
   @override
   void initState() {
     super.initState();
+    readPhone();
   }
 
   void checkConnection() async {
@@ -251,8 +255,8 @@ class _LoginState extends State<Login> {
         response = json.decode(response.body);
         print(response);
         // Sauvegarde des tokens dans le secure storage à l'aide du service de sauvegarde sécurisée
-       AuthService.saveToken(response["access_token"].toString());
-        AuthService.savePhone(_phoneController.text);
+       PrefManager.saveToken(response["access_token"].toString());
+        PrefManager.savePhone(_phoneController.text);
 
         //SecureStorage.tokenStorage(access: response["access_token"].toString(), refresh: response["refresh_token"].toString());
 
@@ -613,5 +617,13 @@ class _LoginState extends State<Login> {
     );
   }
 
+  readPhone() async{
+    final getUserInfo = await SharedPreferences.getInstance();
+
+    setState(() {
+      _phoneController.text = getUserInfo.get("key_myPhoneUser");
+    });
+
+  }
 
 }

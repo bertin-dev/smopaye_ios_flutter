@@ -54,14 +54,13 @@ class _AccountDetailsState extends State<AccountDetails> {
 
   void _getUserProfil(String telephone) async {
     var response = await AuthService.profilUser(phone: telephone);
-    response = json.encode(response);
-    SharedPreferences localStorage = await SharedPreferences.getInstance();
-    localStorage.setString('user_profil', response);
+    //SharedPreferences localStorage = await SharedPreferences.getInstance();
+    //localStorage.setString('user_profil', response);
 
-    var userJson = localStorage.getString('user_profil');
-    var valueResponse = json.decode(userJson);
+    //var userJson = localStorage.getString('user_profil');
+    //var valueResponse = json.decode(userJson);
     setState(() {
-      userData = valueResponse;
+      userData = jsonDecode(response.body);
       phone = (userData["phone"]);
 
       //compte
@@ -104,7 +103,7 @@ class _AccountDetailsState extends State<AccountDetails> {
       fullName = (userData["particulier"][0]["firstname"] + " " + userData["particulier"][0]["lastname"]).toUpperCase();
 
     });
-    print("TTTTTTTTTTTTTTTTTTT $valueResponse");
+    print("TTTTTTTTTTTTTTTTTTT $jsonDecode(response.body)");
   }
 
 

@@ -27,57 +27,38 @@ class AppBottomNavigation extends StatefulWidget {
 
 dynamic getUserProfil({ @required String phone}) async{
   var response = await AuthService.profilUser(phone: phone);
-
-  //fullname = "pipo";
-  //role = response["role"]["name"];
-  //categorie = response["categorie"]["name"];
-  //telephone = response["phone"];
-
-  //print(response);
-  Map<String, dynamic> map = response;
-  List<dynamic> data = map["particulier"];
-  //print(data[0]["lastname"]);
-
-  //AuthService.saveProfilUser(json.encode(response));
-  //print(AuthService.readProfilUser());
-
-
-  //return jsonResponse.map((datauser) => new DataUser.fromJson(datauser)).toList();
-  return response;
-
-  /*List<DataUser> users = [];
-    for(var user in response){
-      DataUser dataUser = DataUser(
-          user["id"],
-          user["phone"],
-          user["address"],
-          user["category_id"],
-          user["state"],
-          user["parent_id"],
-          user["created_by"],
-          user["compte_id"],
-          user["role_id"],
-          user["created_at"],
-          user["updated_at"]);
-      users.add(dataUser);
-    }
-    return users;*/
+  return json.decode(response.body);
 }
-
 
 class _AppBottomNavigationState extends State<AppBottomNavigation> {
   String appBarMenuValue;
   String _appBarText = "Accueil";
   int selectedIndex = 0;
 
+
+  String idUser;
+  String state;
+  String myPhone;
+  String adresse;
+  String myCategorie;
+  String profil_complet;
+  String nom;
+  String prenom;
+  String cni;
+  String session;
+  String myPersonalAccountNumber;
+  String myPersonalAccountState;
+  String myPersonalAccountAmount;
+  String myPersonalAccountId;
+  String numero_card;
+  String myId_card;
+  String myAbon;
+  int points;
+  int bonus;
+
+
   /* élements à utiliser */
   String myTel = "";
-  String fullname = "";
-
-  /*String fullname = "pipo";
-  String role = responses["role"]["name"];
-  String categorie = responses["categorie"]["name"];
-  String telephone = responses["phone"];*/
 
   _AppBottomNavigationState(String tel){
     myTel = tel;

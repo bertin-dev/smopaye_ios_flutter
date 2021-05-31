@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/abonnement.dart';
+import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:smopaye_mobile/services/authService.dart';
 import 'package:smopaye_mobile/services/authService2.dart';
+import 'package:smopaye_mobile/services/prefManager.dart';
 import 'package:smopaye_mobile/views/widgets/homeCommands.dart';
 
 class Home extends StatefulWidget {
@@ -16,11 +19,31 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  var userData;
+  /*var userData;
   var role = "";
-  var etat = "";
+  var etat = "";*/
   var _isVisible;
   AuthService2 authService2;
+
+  String idUser;
+  String state;
+  String myPhone;
+  String adresse;
+  String myCategorie;
+  String profil_complet;
+  String nom;
+  String prenom;
+  String cni;
+  String session;
+  String myPersonalAccountNumber;
+  String myPersonalAccountState;
+  String myPersonalAccountAmount;
+  String myPersonalAccountId;
+  String numero_card;
+  String myId_card;
+  String myAbon;
+  int points;
+  int bonus;
 
   @override
   void initState() {
@@ -45,13 +68,110 @@ class _HomeState extends State<Home> {
 
   void _getUserProfil(String telephone) async {
     var response = await AuthService.profilUser(phone: telephone);
-    response = json.encode(response);
-    SharedPreferences localStorage = await SharedPreferences.getInstance();
-    localStorage.setString('user_profil', response);
 
-    var userJson = localStorage.getString('user_profil');
-    var value = json.decode(userJson);
-    setState(() {
+    Map<String, dynamic> body = jsonDecode(response.body);
+
+
+    if(response.statusCode == 200) {
+
+      DataUser dataUser = DataUser.fromJson(body);
+
+      setState(() {
+
+        //utilisateur courant
+        idUser = dataUser.id;
+        state = dataUser.state;
+        myPhone = dataUser.phone;
+        adresse = dataUser.address;
+
+        //categorie courante de l'utilisateur
+        myCategorie = dataUser.categorie.name;
+
+        //utilisateur ou entreprise courante
+        if (dataUser.particulier.isEmpty) {
+          profil_complet = (dataUser.enterprise[0].raison_social).toUpperCase();
+          nom = dataUser.enterprise[0].raison_social;
+          prenom = "";
+          cni = "";
+        } else {
+          profil_complet = (dataUser.particulier[0].firstname + " " + dataUser.particulier[0].lastname).toUpperCase();
+          nom = dataUser.particulier[0].lastname;
+          prenom = dataUser.particulier[0].firstname;
+          cni = dataUser.particulier[0].cni;
+        }
+
+        //Role de l'utilisateur courant
+        session = (dataUser.role.name).toLowerCase();
+
+        //Compte de l'utilisateur courant
+        myPersonalAccountNumber = dataUser.compte.account_number;
+        myPersonalAccountState = dataUser.compte.account_state;
+        myPersonalAccountAmount = dataUser.compte.amount;
+        myPersonalAccountId = dataUser.compte.id;
+
+
+        //Listes des Cartes de l'utilisateur courant
+        if (dataUser.cards.isNotEmpty) {
+          numero_card = dataUser.cards[0].code_number;
+          myId_card = dataUser.cards[0].id;
+        }
+
+        //Liste des abonnements de l'utilisateur courant
+        List<Abonnement> abonnement = dataUser.compte.compte_subscriptions;
+        for (int i = 0; i < abonnement.length; i++) {
+          myAbon = abonnement[abonnement.length - 1].subscription_type;
+        }
+
+        //calcul des bonnus et points cumulés par l'utilisateur courant
+        if (dataUser.bonus != null)
+          points = int.parse(dataUser.bonus);
+        if (dataUser.bonus_valider != null && dataUser.bonus_non_valider != null)
+          bonus = int.parse(dataUser.bonus_valider) + int.parse(dataUser.bonus_non_valider);
+
+        if(session == "administrateur" || session == "agent"){
+          _isVisible = true;
+        }
+
+      });
+
+
+      final getPhoneNumber = await SharedPreferences.getInstance();
+      //print("4444444444444 ${getPhoneNumber.get('key_myPhoneUser')}");
+      if(getPhoneNumber.get('key_myPhoneUser') == null){
+        print("saved");
+        PrefManager.saveProfilUser(
+            idUser,
+            state,
+            myPhone,
+            adresse,
+            myCategorie,
+            profil_complet,
+            cni,
+            session,
+            myPersonalAccountNumber,
+            myPersonalAccountState,
+            myPersonalAccountAmount,
+            myPersonalAccountId,
+            numero_card,
+            myId_card,
+            myAbon,
+            points,
+            bonus);
+      }else{
+        print("not saved");
+      }
+
+
+    }
+
+    print("TTTTTTTTTTTTTTTTTTT $body");
+
+    //SharedPreferences localStorage = await SharedPreferences.getInstance();
+    //localStorage.setString('user_profil', response);
+
+    //var userJson = localStorage.getString('user_profil');
+    //var value = json.decode(userJson);
+    /*setState(() {
       userData = value;
       role = (userData["role"]["name"]).toLowerCase();
       etat = (userData["state"]).toLowerCase();
@@ -61,7 +181,14 @@ class _HomeState extends State<Home> {
       }
 
     });
-    print("TTTTTTTTTTTTTTTTTTT $value");
+    print("TTTTTTTTTTTTTTTTTTT $value");*/
+
+
+
+
+
+
+
   }
 
   @override
@@ -91,10 +218,10 @@ class _HomeState extends State<Home> {
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                        userData != null ? '${userData["role"]["name"]}' : '',
+                        session != null ? '$session' : '',
                         style: TextStyle(fontSize: 18.0, color: Colors.white, fontWeight: FontWeight.bold)),
                     Text(
-                        userData != null ? '${userData["categorie"]["name"]}' : '',
+                        myCategorie != null ? '$myCategorie' : '',
                         style: TextStyle(fontSize: 13.0, color: Colors.white, fontWeight: FontWeight.bold)),
                   ],
                 ),
@@ -122,8 +249,8 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                           child: Column(
                             children: <Widget>[
-                              Text("Points Cumulés: 0", textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white)),
-                              Text("Bonus: 0",textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white))
+                              Text("Points Cumulés: $points", textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white)),
+                              Text("Bonus: $bonus",textAlign: TextAlign.left, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.white))
                             ],
                           ),
                         ),
@@ -195,10 +322,10 @@ class _HomeState extends State<Home> {
         Row(mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
 
-            if(role != null)...{
-              if (role == "accepteur")...{
+            if(session != null)...{
+              if (session == "accepteur")...{
 
-            if(etat == "activer")...{
+            if(state == "activer")...{
               Expanded(
                 child: Column(children: <Widget>[
                   HomeCommands(
@@ -331,9 +458,9 @@ class _HomeState extends State<Home> {
             }
 
               }
-              else if(role == "agent")...{
+              else if(session == "agent")...{
 
-            if(etat == "activer")...{
+            if(state == "activer")...{
               Expanded(
                 child: Column(children: <Widget>[
                   HomeCommands(
@@ -447,7 +574,7 @@ class _HomeState extends State<Home> {
               ),
             }
                 }
-              else if(role == "utilisateur")...{
+              else if(session == "utilisateur")...{
                   Expanded(
                     child: Column(children: <Widget>[
                       HomeCommands(
@@ -500,9 +627,9 @@ class _HomeState extends State<Home> {
                     ],),
                   ),
                 }
-              else if(role == "administrateur")...{
+              else if(session == "administrateur")...{
 
-                if(etat == "activer")...{
+                if(state == "activer")...{
                     Expanded(
                       child: Column(children: <Widget>[
 

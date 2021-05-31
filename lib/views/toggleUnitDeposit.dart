@@ -1,9 +1,15 @@
 
 
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/models/home_toggle.dart';
+import 'package:smopaye_mobile/services/authService.dart';
+import 'package:smopaye_mobile/views/widgets/alertDialogs/defaultDialog.dart';
 import 'package:smopaye_mobile/views/widgets/form/button.dart';
 import 'package:smopaye_mobile/views/widgets/form/dropdownField.dart';
 import 'package:smopaye_mobile/views/widgets/form/textField.dart';
@@ -101,7 +107,7 @@ class _ToggleUnitDepositState extends State<ToggleUnitDeposit> {
   // Fonction de transfert
 
   _toggle (BuildContext context) async {
-
+    final getIdCard = await SharedPreferences.getInstance();
     print("type_solde: ${_balanceType}\namount: ${_amountController.text}\n");
     setState(() {
       _autovalidate = true;
@@ -112,7 +118,7 @@ class _ToggleUnitDepositState extends State<ToggleUnitDeposit> {
         _buttonState = false;
       });
 
-      Timer(Duration(seconds: 3),
+      /*Timer(Duration(seconds: 3),
               (){
             setState(() {
               _buttonState = true;
@@ -121,7 +127,33 @@ class _ToggleUnitDepositState extends State<ToggleUnitDeposit> {
       );
       setState(() {
         _buttonState = false;
-      });
+      });*/
+
+
+      dynamic response = await AuthService.toggleUnitDepositInSmopayeServer(
+          card_id: getIdCard.get("key_myIdCardUser"),
+          action: _balanceType,
+          withDrawalAmount: double.parse(_amountController.text));
+
+      Map<String, dynamic> body = jsonDecode(response.body);
+
+      if(response.statusCode == 200) {
+        setState(() {
+          _buttonState = true;
+        });
+        Home_toggle home_toggle = Home_toggle.fromJson(body);
+
+        String idSender = home_toggle.message.code_number;
+        String msgSender = home_toggle.message.notif;
+        _successResponse(idSender, msgSender);
+      } else{
+        setState(() {
+          _buttonState = true;
+        });
+        ErrorBody errorBody = ErrorBody.fromJson(body);
+        _errorResponse(errorBody.message);
+      }
+
 
       setState(() {
         _autovalidate = true;
@@ -141,6 +173,38 @@ class _ToggleUnitDepositState extends State<ToggleUnitDeposit> {
     }
     // The pattern of the amount didn't match the regex above.
     return 'Inserer un montant valide';
+  }
+
+  _successResponse (String id_cardSender, String msgSender) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$msgSender",
+            icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
+          );
+
+      },
+    );
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
+            icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
+          );
+
+      },
+    );
   }
 }
 

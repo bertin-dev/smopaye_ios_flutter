@@ -104,7 +104,7 @@ class AuthService {
           'Accept': 'application/json',
           'Authorization' : 'Bearer $value'
         });
-    return json.decode(response.body);
+    return response;
 
   }
 
@@ -143,9 +143,9 @@ class AuthService {
 
 
   /* Lister all Card using by user */
-  Future<List<DataAllUserCard>> findAllUserCards({ @required int user_id }) async {
-
-    String myUrl =  Endpoints.baseUrl + Endpoints.cardUser + "$user_id/children";
+  Future<List<DataAllUserCard>> findAllUserCards({ @required String user_id }) async {
+    print("***************************************** $user_id");
+    String myUrl =  Endpoints.baseUrl + Endpoints.cardUser + user_id + Endpoints.cardUser2;
     final prefs = await SharedPreferences.getInstance();
     final key = 'access_token';
     final value = prefs.get(key) ?? 0;
@@ -222,6 +222,269 @@ class AuthService {
         });
     return response;
 }
+
+
+  /* Transfert(Carte à Carte)*/
+  static dynamic transaction_carte_A_Carte({@required double amount, @required String id_card_sender, @required String id_card_receiver, @required String typeTransaction}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.card_transfer;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.post(myUrl,
+        headers: headers,
+        body: {
+          "amount" : "$amount",
+          "code_number_sender" : "$id_card_sender",
+          "code_number_receiver" : "$id_card_receiver",
+          "transaction_type" : "$typeTransaction"
+        });
+    return response;
+  }
+
+
+  /* Basculer (Compte Unité vers Compte dépot et vis-vers ça)*/
+  static dynamic toggleUnitDepositInSmopayeServer({@required String card_id, @required String action, @required double withDrawalAmount}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.toggle_balance1 + card_id + Endpoints.toggle_balance2;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.post(myUrl,
+        headers: headers,
+        body: {
+          "card_id" : "$card_id",
+          "action" : "$action",
+          "withDrawalAmount" : "$withDrawalAmount"
+        });
+    return response;
+  }
+
+
+  /* Consult Account */
+  static dynamic consult_account({@required String card_id, @required String typeSolde}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.checkBalance + card_id + '/' + typeSolde;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.get(myUrl,
+        headers: headers);
+
+    return response;
+  }
+
+
+  //service permettant de recupérer le nom du détenteur du code QR
+  static dynamic profil_userQRCode({ @required String card_number }) async {
+
+    String myUrl = Endpoints.baseUrl + Endpoints.qr_code1 + card_number + Endpoints.qr_code2;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    http.Response response = await http.get(myUrl,
+        headers: {
+          'Accept': 'application/json',
+          'Authorization' : 'Bearer $value'
+        });
+    return response;
+  }
+
+
+  //Retrait (Compte à Compte) chez operateur
+  static dynamic retraitCompteOperator({@required String account_number, @required double withDrawalAmount, @required String phoneNumber}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.retraitCompte + account_number + Endpoints.retrait;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.post(myUrl,
+        headers: headers,
+        body: {
+          "account_number" : "$account_number",
+          "withDrawalAmount" : "$withDrawalAmount",
+          "phoneNumber" : "$phoneNumber"
+        });
+    return response;
+  }
+
+
+  //Retrait (carte à carte) chez operateur
+  static dynamic retrait_accepteur({@required double withDrawalAmount, @required String phoneNumber, @required String card_id}) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.retraitCarte + card_id + Endpoints.retrait;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    Map<String, String> headers = {
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer $value'
+    };
+
+    var response = await http.post(myUrl,
+        headers: headers,
+        body: {
+          "withDrawalAmount" : "$withDrawalAmount",
+          "phoneNumber" : "$phoneNumber",
+          "card_id" : "$card_id"
+        });
+    return response;
+  }
+
+
+  /* Recharge Card by User */
+  static dynamic rechargeCards({ @required String code_number, @required double withDrawalAmount, @required String account_number }) async {
+
+    String myUrl = Endpoints.baseUrl + Endpoints.rechargeCartebyCompte + account_number + Endpoints.rechargecarte;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    final response = await http.post(myUrl,
+        headers: {
+          'Accept': 'application/json',
+          'Authorization' : 'Bearer $value'
+        },
+        body: {
+          "code_number" : "$code_number",
+          "withDrawalAmount" : "$withDrawalAmount",
+          "account_number" : "$account_number"
+        });
+    return response;
+  }
+
+
+  /* Manage_Recharge step 1*/
+  static dynamic recharge_step1({ @required String account_number, @required double amount, @required String phoneNumber }) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.retraitCompte + account_number + Endpoints.recharge;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    final response = await http.post(myUrl,
+        headers: {
+          'Accept': 'application/json',
+          'Authorization' : 'Bearer $value'
+        },
+        body: {
+          "account_number" : "$account_number",
+          "amount" : "$amount",
+          "phoneNumber" : "$phoneNumber"
+        });
+    return response;
+  }
+
+
+
+  /* Manage_Recharge step 2*/
+  static dynamic recharge_step2({ @required String account_number, @required String paymentId }) async {
+    String myUrl = Endpoints.baseUrl + Endpoints.retraitCompte + account_number + Endpoints.checkpayment;
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'access_token';
+    final value = prefs.get(key) ?? 0;
+
+    final response = await http.put(myUrl,
+        headers: {
+          'Accept': 'application/json',
+          'Authorization' : 'Bearer $value'
+        },
+        body: {
+          "account_number" : "$account_number",
+          "paymentId" : "$paymentId"
+        });
+    return response;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -422,27 +685,10 @@ class AuthService {
   }
 
 
-  //service permettant de recupérer le nom du détenteur du code QR
-  static dynamic profil_userQRCode({ @required String card_number }) async {
-
-    var uri = "https://webservice.domaineteste.space.smopaye.fr/public/api/card/$card_number/UserCard";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    http.Response response = await http.get(uri,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        });
-    return json.decode(response.body);
-
-  }
-
   /* Transfert(Carte à Carte), Payer Facture, QR CODE, RETRAIT_SMOPAYE*/
   static dynamic transaction({ @required double amount, @required String code_number_sender, @required String code_number_receiver, @required String transaction_type }) async {
 
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/card/transaction/payment";
+    String myUrl = Endpoints.baseUrl + Endpoints.transaction;
     final prefs = await SharedPreferences.getInstance();
     final key = 'access_token';
     final value = prefs.get(key) ?? 0;
@@ -505,86 +751,8 @@ class AuthService {
     return response;
   }
 
-  /* Retrait Opérateur*/
-  static dynamic retrait_accepteur({ @required Float withDrawalAmount, @required String phoneNumber, @required String card_id }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/card/$card_id/retrait";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.post(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        },
-        body: {
-          "withDrawalAmount" : "$withDrawalAmount",
-          "phoneNumber" : "$phoneNumber",
-          "card_id" : "$card_id"
-        });
-    return response;
-  }
 
 
-  /* Manage_Recharge step 1*/
-  static dynamic recharge_step1({ @required String account_number, @required Float amount, @required String phoneNumber }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/account/$account_number/recharge";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.post(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        },
-        body: {
-          "account_number" : "$account_number",
-          "amount" : "$amount",
-          "phoneNumber" : "$phoneNumber"
-        });
-    return response;
-  }
-
-
-
-  /* Manage_Recharge step 2*/
-  static dynamic recharge_step2({ @required String account_number, @required String paymentId }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/account/$account_number/checkpayment";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.put(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        },
-        body: {
-          "account_number" : "$account_number",
-          "paymentId" : "$paymentId"
-        });
-    return response;
-  }
-
-  /* Consult Account */
-  static dynamic consult_account({ @required String card_id, @required String typeSolde }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/card/$card_id/$typeSolde";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.get(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        });
-    return response;
-  }
 
   /* Debit Card */
   static dynamic debit_card({ @required Float amount, @required String code_number_sender, @required String serial_number_device }) async {
@@ -689,27 +857,6 @@ class AuthService {
   }
 
 
-  /* Recharge Card by User */
-  static dynamic rechargeCards({ @required String code_number, @required Float withDrawalAmount, @required String account_number }) async {
-
-    String myUrl = "https://webservice.domaineteste.space.smopaye.fr/public/api/account/$account_number/rechargecarte";
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-
-    final response = await http.post(myUrl,
-        headers: {
-          'Accept': 'application/json',
-          'Authorization' : 'Bearer $value'
-        },
-        body: {
-          "code_number" : "$code_number",
-          "withDrawalAmount" : "$withDrawalAmount",
-          "account_number" : "$account_number"
-        });
-    return response;
-  }
-
 
 
   /* update Card */
@@ -755,43 +902,6 @@ class AuthService {
   /*----------------------------------------------------------END CARD SMOPAYE-------------------------------------------------------*/
 
 
-
-  /*----------------------------------------------------------ACCESS TOKEN AND REFRESH TOKEN-------------------------------------------------------*/
-  static saveToken(String access_token) async{
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = access_token;
-    prefs.setString(key, value);
-  }
-
-
-  static readToken() async{
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'access_token';
-    final value = prefs.get(key) ?? 0;
-    print('read : $value');
-  }
-
-/*----------------------------------------------------------END TOKEN-------------------------------------------------------*/
-
-
-
-  /*----------------------------------------------------------SAVE AND PHONE NUMBER-------------------------------------------------------*/
-  static savePhone(String tel) async{
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'phone';
-    final value = tel;
-    prefs.setString(key, value);
-  }
-
-  //pas encore utilisé
-  static removePhone() async{
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'phone';
-    final value = prefs.get(key) ?? 0;
-    print('read : $value');
-  }
-/*----------------------------------------------------------END-------------------------------------------------------*/
 
 
 }

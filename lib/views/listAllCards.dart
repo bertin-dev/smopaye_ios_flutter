@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,8 @@ import 'package:smopaye_mobile/models/abonnement.dart';
 import 'package:smopaye_mobile/models/dataAllUserCard.dart';
 import 'package:smopaye_mobile/models/dataUser.dart';
 import 'package:smopaye_mobile/models/dataUserCard.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/models/messageRechargeCardByAccount.dart';
 import 'package:smopaye_mobile/services/authService.dart';
 import 'package:smopaye_mobile/views/widgets/alertDialogs/defaultDialog.dart';
 import 'package:smopaye_mobile/views/widgets/form/textField.dart';
@@ -25,6 +28,9 @@ class _ListAllCardsState extends State<ListAllCards> {
   final _amountFormKey = GlobalKey<FormState>();
   TextEditingController _amountController = new TextEditingController();
   String cardOwner = "";
+  String idUser = "";
+  String accountNumber = "";
+
 
   @override
   void initState() {
@@ -99,7 +105,7 @@ class _ListAllCardsState extends State<ListAllCards> {
                   //color: Colors.red,
                   padding: EdgeInsets.all(1.0),
                   child: FutureBuilder(
-                    future: authService.findAllUserCards(user_id: 14),
+                    future: authService.findAllUserCards(user_id: idUser),
                     builder: (BuildContext context, AsyncSnapshot<List<DataAllUserCard>> snapshot){
                       switch(snapshot.connectionState){
                         case ConnectionState.active:
@@ -284,14 +290,14 @@ class _ListAllCardsState extends State<ListAllCards> {
   }
 
   readPhone() async{
-    final prefs = await SharedPreferences.getInstance();
-    final key = 'phone';
-    final value = prefs.getString(key) ?? 0;
-    if(value != null){
+    final getUserInfo = await SharedPreferences.getInstance();
+
       setState(() {
-        tel = value.toString();
+        tel = getUserInfo.get("key_myPhoneUser");
+        idUser = getUserInfo.get("key_idUser");
+        accountNumber = getUserInfo.get("key_myPersonalAccountNumberUser");
       });
-    }
+
   }
 
   Widget drawEmptySubscriptionList() {
@@ -359,7 +365,7 @@ class _ListAllCardsState extends State<ListAllCards> {
                         onPressed: () {
                           if (_amountFormKey.currentState.validate()) {
                             Navigator.of(context).pop();
-                            _check();
+                            _rechargeYourCarte();
                           }
                         },
                       ),
@@ -422,7 +428,7 @@ class _ListAllCardsState extends State<ListAllCards> {
                         onPressed: () {
                           if (_amountFormKey.currentState.validate()) {
                             Navigator.of(context).pop();
-                            _check();
+                            _rechargeYourCarte();
                           }
                         },
                       ),
@@ -455,8 +461,34 @@ class _ListAllCardsState extends State<ListAllCards> {
     return 'Enter a valid amount';
   }
 
+  // Fonction de recharge des cartes
+  _rechargeYourCarte() async {
+      dynamic response = await AuthService.rechargeCards(
+          code_number: cardOwner,
+          withDrawalAmount: double.parse(_amountController.text),
+          account_number: accountNumber);
 
-  _check () {
+      Map<String, dynamic> body = jsonDecode(response.body);
+      rememberMe = false;
+      rememberMe1 = false;
+      if(response.statusCode == 200) {
+
+        MessageRechargeCardByAccount messageRechargeCardByAccount = MessageRechargeCardByAccount.fromJson(body);
+
+        String idCardReceiver = messageRechargeCardByAccount.message.code_number;
+        String msgReceiver = "Votre solde dépot a été crédité d'un montant de ${_amountController.text} FCFA. Votre nouveau solde est de ${messageRechargeCardByAccount.message.deposit}  FCFA";
+
+        String idCardSender = cardOwner;
+        String msgSender = messageRechargeCardByAccount.message.notif;
+
+        _successResponse(idCardReceiver, msgReceiver, idCardSender, msgSender);
+      } else{
+        ErrorBody errorBody = ErrorBody.fromJson(body);
+        _errorResponse(errorBody.message);
+      }
+  }
+
+  _successResponse (String id_cardReceiver, String msgReceiver, String id_cardSender, String msgSender) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -464,7 +496,23 @@ class _ListAllCardsState extends State<ListAllCards> {
         return
           DefaultAlertDialog(
             title: "Information",
-            message: "Le Solde de votre compte ${cardOwner} est insuffisant",
+            message: "$msgReceiver",
+            icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
+          );
+
+      },
+    );
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
             icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
           );
 

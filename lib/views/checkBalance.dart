@@ -1,6 +1,11 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:smopaye_mobile/models/allMyResponse.dart';
+import 'package:smopaye_mobile/models/errorBody.dart';
+import 'package:smopaye_mobile/services/authService.dart';
 import 'package:smopaye_mobile/views/widgets/form/passwordField.dart';
 
 import 'widgets/alertDialogs/defaultDialog.dart';
@@ -104,8 +109,8 @@ class _CheckBalanceState extends State<CheckBalance> {
  // Fonction de consultation de solde
  
   _checkBalance (BuildContext context) async {
-
-    print("accountnber: ${_cardNumberController.text}\n\n");
+    final getIDCardSender = await SharedPreferences.getInstance();
+    print("accountnber: ${_cardNumberController.text}\n" + "_balanceType: ${_balanceType}\n");
       setState(() {
        _autovalidate = true; 
       });
@@ -115,7 +120,7 @@ class _CheckBalanceState extends State<CheckBalance> {
         _buttonState = false;
         });
         
-      Timer(Duration(seconds: 1),
+      /*Timer(Duration(seconds: 1),
       (){
         setState(() {
          _buttonState = true;
@@ -168,7 +173,35 @@ class _CheckBalanceState extends State<CheckBalance> {
       );
       setState(() {
          _buttonState = false;
-        });
+        });*/
+
+
+        dynamic response = await AuthService.consult_account(
+            card_id: getIDCardSender.get("key_myIdCardUser"),
+            typeSolde: _balanceType);
+
+
+        Map<String, dynamic> body = jsonDecode(response.body);
+
+        print(_cardNumberController.text);
+        print(_balanceType);
+        print(response.statusCode);
+
+        if(response.statusCode == 200) {
+          setState(() {
+            _buttonState = true;
+          });
+          AllMyResponse allMyHomeResponse = AllMyResponse.fromJson(body);
+          String msg = allMyHomeResponse.message;
+          _successResponse( _cardNumberController.text, msg);
+        } else{
+          setState(() {
+            _buttonState = true;
+          });
+          ErrorBody errorBody = ErrorBody.fromJson(body);
+          _errorResponse(errorBody.message);
+        }
+
 
       setState(() {
        _autovalidate = true; 
@@ -176,7 +209,7 @@ class _CheckBalanceState extends State<CheckBalance> {
       }
   }
 
-  _check () {
+  _successResponse (String id, String message) {
       showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -184,7 +217,7 @@ class _CheckBalanceState extends State<CheckBalance> {
           return 
           DefaultAlertDialog(
             title: "Information",
-            message: "Le Solde $_balanceType de votre compte ${_cardNumberController.text} est de: 0 fcfa",
+            message: "$message",
             icon: Icon(Icons.check_circle, color: Colors.green, size: 45,),
           );
           
@@ -206,6 +239,22 @@ class _CheckBalanceState extends State<CheckBalance> {
       }
       // The pattern of the password didn't match the regex above.
       return 'Password must be 5 characters long';
+  }
+
+  _errorResponse (String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return
+          DefaultAlertDialog(
+            title: "Information",
+            message: "$message",
+            icon: Icon(Icons.cancel, color: Colors.red, size: 45,),
+          );
+
+      },
+    );
   }
 
 
